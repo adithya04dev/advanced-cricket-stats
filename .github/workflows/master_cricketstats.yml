@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'cricketstats'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F488D98DE91E4155B829DB8E35A3662B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3EADB3B1D3C24BACB11EBD1EFB26708E }}
