@@ -16,7 +16,7 @@ from st_files_connection import FilesConnection
 # Create connection object and retrieve file contents.
 # Specify input format is a csv and to cache the result for 600 seconds.
 conn = st.connection('s3', type=FilesConnection)
-df = conn.read("testbucket-jrieke/myfile.csv", input_format="csv", ttl=600)
+df = conn.read("csvfiles-cricmetric-clone/t20_matches_with_types.csv.csv", input_format="csv", ttl=600)
 
 # Create a sidebar for navigation
 option = st.selectbox(
