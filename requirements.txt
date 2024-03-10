@@ -2,5 +2,4 @@ pandas
 streamlit
 numpy
 matplotlib
-s3fs
-st-files-connection
+boto3
