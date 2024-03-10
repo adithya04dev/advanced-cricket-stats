@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from stats import calculate_venue_stats
-import matplotlib.plt as px
+import matplotlib.pyplot as px
 
 file_path = r"C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\json_csv\csv_files\t20_matches_new_format.csv"  # replace with your file path
 # if st.button('Rerun'): st.experimental_rerun()
