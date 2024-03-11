@@ -17,28 +17,21 @@ from venue_stats import venue_search
 # # Specify input format is a csv and to cache the result for 600 seconds.
 # conn = st.connection('s3', type=FilesConnection)
 # df = conn.read("csvfiles-cricmetric-clone/t20_matches_with_types.csv", input_format="csv")
-# import os
 import boto3
 import pandas as pd
+import os
 
-# It's a good practice to set your AWS credentials as environment variables
-# os.environ['AWS_ACCESS_KEY_ID'] = 'YOUR_ACCESS_KEY'
-# os.environ['AWS_SECRET_ACCESS_KEY'] = 'YOUR_SECRET_KEY'
-# os.environ['AWS_DEFAULT_REGION'] = 'YOUR_REGION'
-
-# However, for the sake of this example, I'll use the credentials you've provided
-# Please note that this is not a good practice and you should never hardcode your AWS credentials in your script
-session = boto3.Session(
-    aws_access_key_id=,
-    aws_secret_access_key=,
-    region_name='ap-south-1'
-)
+# Set your AWS credentials as environment variables
+os.environ['AWS_ACCESS_KEY_ID'] = st.secrets['AWS_ACCESS_KEY_ID']
+os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets['AWS_SECRET_ACCESS_KEY']
+os.environ['AWS_DEFAULT_REGION'] = 'ap-south-1'
 
 # Create an S3 client
-s3 = session.client('s3')
+s3 = boto3.client('s3')
 
 # Get the object from S3
 obj = s3.get_object(Bucket='csvfiles-cricmetric-clone', Key='t20_matches_with_types.csv')
+
 
 # Read the CSV file
 df = pd.read_csv(obj['Body'])
