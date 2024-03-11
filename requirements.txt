@@ -3,3 +3,4 @@ streamlit
 numpy
 matplotlib
 boto3
+os
