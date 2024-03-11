@@ -29,8 +29,8 @@ import pandas as pd
 # However, for the sake of this example, I'll use the credentials you've provided
 # Please note that this is not a good practice and you should never hardcode your AWS credentials in your script
 session = boto3.Session(
-    aws_access_key_id='AKIA5CBFFCK6W6Z42WBB',
-    aws_secret_access_key='eMlYXpFmOIJsalO4+cCZ508I/OqVjoS/Iu1IAkxU',
+    aws_access_key_id=,
+    aws_secret_access_key=,
     region_name='ap-south-1'
 )
 
