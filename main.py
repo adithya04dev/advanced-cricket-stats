@@ -15,7 +15,7 @@ from st_files_connection import FilesConnection
 # # Create connection object and retrieve file contents.
 # # Specify input format is a csv and to cache the result for 600 seconds.
 conn = st.connection('s3', type=FilesConnection)
-df = conn.read("csvfiles-cricmetric-clone/t20_matches_with_types.csv", input_format="csv",ttl=0)
+df = conn.read("csvfiles-cricmetric-clone/t20_matches_with_types.csv", input_format="csv",ttl=600)
 import os
 
 # Set your AWS credentials as environment variables
