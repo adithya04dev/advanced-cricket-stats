@@ -48,6 +48,8 @@ def matchup():
             col1, col2 = st.columns(2)
             with col1:
                 tournament_name = st.multiselect('Tournament Name', tournament_name_options)
+                if not tournament_name:
+                    tournament_name=None
             with col2:
                 venue = st.multiselect('Venue', options=venue_options, placeholder='Select All')
                 if not venue:
