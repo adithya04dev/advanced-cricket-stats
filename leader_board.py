@@ -32,7 +32,8 @@ def leader_board():
         overs_to = None
 
         series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = dropdown_values('TournamentName')
+        # tournament_name_options = dropdown_values('TournamentName')
+        tournament_name_options = load_dropdown_values('TournamentName')
         player_team_options = load_dropdown_values('BattingTeam')
         opp_player_team_options = load_dropdown_values('BowlingTeam')
         venue_options = load_dropdown_values('Venue')
