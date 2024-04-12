@@ -171,7 +171,7 @@ def convert_to_sql_query(params):
                     COUNT(DISTINCT Matchno) AS Innings,
                     SUM(is_bowler_wicket) AS Wickets,
                     SUM(TotalRuns) AS RunsConceded,
-                    SUM(is_ball) AS BallsBowled,
+                    SUM(is_ball_int) AS BallsBowled,
                     SUM(is_dot) AS DotBallsBowled,
                     SUM(is_boundary) AS BoundaryBalls
                 FROM {database}.{table}
@@ -212,7 +212,7 @@ def convert_to_sql_query(params):
                     BattingTeam,
                     COUNT(DISTINCT Matchno) AS Innings,
                     SUM(Batsman_Run) AS Runs,
-                    SUM(is_ball) AS BallsFaced,
+                    SUM(is_ball_int) AS BallsFaced,
                     SUM(is_batter_out) AS Outs,
                     SUM(is_dot) AS DotBallsFaced,
                     SUM(is_boundary) AS BoundaryBalls
@@ -254,7 +254,7 @@ def convert_to_sql_query(params):
                     COUNT(DISTINCT Matchno) AS Innings,
                     SUM(is_bowler_wicket) AS Wickets,
                     SUM(TotalRuns) AS RunsConceded,
-                    SUM(is_ball) AS BallsBowled,
+                    SUM(is_ball_int) AS BallsBowled,
                     SUM(is_dot) AS DotBallsBowled,
                     SUM(is_boundary) AS BoundaryBalls
                 FROM {database}.{table}
@@ -292,7 +292,7 @@ def convert_to_sql_query(params):
         if stats_type == 'batting':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT Matchno) as Innings, SUM(Batsman_Run) as Runs, SUM(is_ball) as BallsFaced, SUM(is_batter_out) as Outs, SUM(is_dot) as DotBallsFaced, SUM(is_boundary) as BoundaryBalls
+                SELECT  COUNT(DISTINCT Matchno) as Innings, SUM(Batsman_Run) as Runs, SUM(is_ball_int) as BallsFaced, SUM(is_batter_out) as Outs, SUM(is_dot) as DotBallsFaced, SUM(is_boundary) as BoundaryBalls
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY {group_by}
@@ -308,7 +308,7 @@ def convert_to_sql_query(params):
         elif stats_type == 'bowling':
             sql_query = f"""
             WITH stats AS (
-                SELECT Bowler, COUNT(DISTINCT Matchno) as Innings, SUM(is_bowler_wicket) as Wickets, SUM(TotalRuns) as RunsConceded, SUM(is_ball) as BallsBowled, SUM(is_dot) as DotBallsBowled, SUM(is_boundary) as BoundaryBalls
+                SELECT Bowler, COUNT(DISTINCT Matchno) as Innings, SUM(is_bowler_wicket) as Wickets, SUM(TotalRuns) as RunsConceded, SUM(is_ball_int) as BallsBowled, SUM(is_dot) as DotBallsBowled, SUM(is_boundary) as BoundaryBalls
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY {group_by}
@@ -329,7 +329,7 @@ def convert_to_sql_query(params):
             
             COUNT(DISTINCT Matchno) as Innings,
             SUM(Batsman_Run) as Runs,
-            SUM(is_ball) as BallsFaced,
+            SUM(is_ball_int) as BallsFaced,
             SUM(is_batter_out) as Outs,
             SUM(is_dot) as DotBallsFaced,
             SUM(is_boundary) as BoundaryBalls
@@ -368,7 +368,7 @@ def convert_to_sql_query(params):
           SELECT
             BowlingType,
             SUM(Batsman_Run) as Runs,
-            SUM(is_ball) as Balls,
+            SUM(is_ball_int) as Balls,
             SUM(is_batter_out) as Outs,
             SUM(is_dot) as DotBalls,
             SUM(is_boundary) as BoundaryBalls
@@ -409,7 +409,7 @@ def convert_to_sql_query(params):
                 Batsman,
                 COUNT(DISTINCT Matchno) as Innings,
                 SUM(Batsman_Run) as Runs,
-                SUM(is_ball) as BallsFaced,
+                SUM(is_ball_int) as BallsFaced,
                 SUM(is_batter_out) as Outs,
                 SUM(is_dot) as DotBallsFaced,
                 SUM(is_boundary) as BoundaryBalls
@@ -451,7 +451,7 @@ def convert_to_sql_query(params):
                 COUNT(DISTINCT Matchno) as Innings,
                 SUM(is_bowler_wicket) as Wickets,
                 SUM(TotalRuns) as RunsConceded,
-                SUM(is_ball) as BallsBowled,
+                SUM(is_ball_int) as BallsBowled,
                 SUM(is_dot) as DotBallsBowled,
                 SUM(is_boundary) as BoundaryBalls
               FROM {database}.{table}
