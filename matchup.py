@@ -8,9 +8,9 @@ def matchup():
     def get_user_inputs():
         col1, col2, col3 = st.columns(3)
         with col1:
-            batter_name = st.multiselect('Batter Name', load_dropdown_values('Batsman'))
+            batter_name = st.multiselect('Batter Name', dropdown_values('Batsman'))
         with col2:
-            bowler_name = st.multiselect('Bowler Name', load_dropdown_values('Bowler'))
+            bowler_name = st.multiselect('Bowler Name', dropdown_values('Bowler'))
         with col3:
             group_by = st.selectbox('Group By', ['TournamentName', 'Venue', 'Batsman', 'Bowler'])
         adv = st.checkbox('Advanced Options')
