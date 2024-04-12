@@ -500,7 +500,7 @@ def load_dropdown_values(column):
     values = []
 
     # Load the list values from a .txt file
-    with open(f"./{column}.txt", "r") as f:
+    with open(f"{column}.txt", "r") as f:
         for line in f:
             values.append(line.strip())
 
