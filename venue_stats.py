@@ -57,7 +57,7 @@ def venue_search():
 
         return {
             'function_type': 'venue_search',
-            'venue': venue,
+            'venue': [venue],
             'match_type': match_type,
             'adv': adv,
             'date_from': date_from,
