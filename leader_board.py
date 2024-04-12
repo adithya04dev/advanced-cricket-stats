@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from stats import calculate_leaderboard_stats
+from big_query_engine_code import dropdown_values
 
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import calculate_stats
@@ -31,7 +32,7 @@ def leader_board():
         overs_to = None
 
         series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = load_dropdown_values('TournamentName')
+        tournament_name_options = dropdown_values('TournamentName')
         player_team_options = load_dropdown_values('BattingTeam')
         opp_player_team_options = load_dropdown_values('BowlingTeam')
         venue_options = load_dropdown_values('Venue')
