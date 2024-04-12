@@ -496,7 +496,7 @@ df = query_to_dataframe( query)
 def dropdown_values(column):
     query = f"""
     SELECT DISTINCT {column}
-    FROM bbbdata.balls
+    FROM bbbdata.ballsnew
     """
     df = query_to_dataframe(query)
     values = df[column].tolist()
