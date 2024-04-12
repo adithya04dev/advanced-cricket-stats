@@ -57,7 +57,7 @@ def convert_to_sql_query(params):
 
     # Build the SQL query
     database ='bbbdata'
-    table = 'balls'
+    table = 'ballsnew'
 
     function_type = params.get('function_type')
     analysis_type = params.get('analysis_type')
