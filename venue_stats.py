@@ -25,7 +25,7 @@ def venue_search():
 
         # Call load_dropdown_values function once for each category
         series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = load_dropdown_values('TournamentName')
+        tournament_name_options = dropdown_values('TournamentName')
 
         if adv:
             col1, col2, col3 = st.columns(3)
