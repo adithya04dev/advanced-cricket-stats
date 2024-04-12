@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 plotly
-google-cloud-bigquery
+google-cloud-bigquery[pandas]
 db_dtypes
