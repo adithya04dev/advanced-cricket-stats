@@ -3,6 +3,8 @@ import pandas as pd
 from stats import calculate_venue_stats
 import plotly.express as px
 from big_query_engine_code import load_dropdown_values
+from big_query_engine_code import dropdown_values
+
 from big_query_engine_code import calculate_stats
 def venue_search():
     def get_user_inputs():
