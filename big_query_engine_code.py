@@ -50,7 +50,7 @@ params = {
 }
 def convert_to_sql_query(params):
     # Standardize input parameters
-    for key in ['venue','batter_name','bowler_name','inninggs_number','venue','batter_team', 'bowler_team', 'series_name', 'tournament_name', 'venue', 'batter_type','bowler_type']:
+    for key in ['batter_name','bowler_name','inninggs_number','venue','batter_team', 'bowler_team', 'series_name', 'tournament_name',  'batter_type','bowler_type']:
         if key in params and isinstance(params[key], list):
             params[key] = tuple(params[key])
             # print("hello")
