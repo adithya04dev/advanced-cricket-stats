@@ -129,7 +129,7 @@ def convert_to_sql_query(params):
                     Batsman,
                     COUNT(DISTINCT Matchno) AS Innings,
                     SUM(Batsman_Run) AS Runs,
-                    SUM(is_ball) AS BallsFaced,
+                    SUM(is_ball_int) AS BallsFaced,
                     SUM(is_batter_out) AS Outs,
                     SUM(is_dot) AS DotBallsFaced,
                     SUM(is_boundary) AS BoundaryBalls
