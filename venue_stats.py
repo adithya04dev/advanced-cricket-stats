@@ -10,10 +10,14 @@ def venue_search():
     def get_user_inputs():
         col1, col2 = st.columns(2)
         with col1:
-            venue_name = st.selectbox('Venue Name', load_dropdown_values('Venue'))
+            venue = st.selectbox('Venue Name', load_dropdown_values('Venue'))
+            if not venue:
+                    venue = None
 
         with col2:
             match_type = st.selectbox('Match Type', load_dropdown_values('MatchType'))
+            if not match_type:
+                    match_type = None
 
         adv = st.checkbox('Advanced Options')
 
@@ -36,13 +40,13 @@ def venue_search():
             with col2:
                 date_to = st.date_input('Date To', pd.to_datetime('2100-12-31'))
             with col3:
-                series_name = st.multiselect('Series Name', options=series_name_options, placeholder='Select All')
+                series_name = st.multiselect('Series Name', options=series_name_options, placeholder='All')
                 if not series_name:
                     series_name = None
 
             col1, col2, col3 = st.columns(3)
             with col1:
-                tournament_name = st.multiselect('Tournament Name', options=tournament_name_options, placeholder='Select All')
+                tournament_name = st.multiselect('Tournament Name', options=tournament_name_options, placeholder='All')
                 if not tournament_name:
                     tournament_name = None
 
@@ -53,7 +57,7 @@ def venue_search():
 
         return {
             'function_type': 'venue_search',
-            'venue_name': venue_name,
+            'venue': venue,
             'match_type': match_type,
             'adv': adv,
             'date_from': date_from,
