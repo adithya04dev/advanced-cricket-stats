@@ -10,12 +10,12 @@ def venue_search():
     def get_user_inputs():
         col1, col2 = st.columns(2)
         with col1:
-            venue = st.selectbox('Venue Name', load_dropdown_values('Venue'))
+            venue = st.selectbox('Venue Name', load_dropdown_values('venue'))
             if not venue:
                     venue = None
 
         with col2:
-            match_type = st.selectbox('Match Type', load_dropdown_values('MatchType'))
+            match_type = st.selectbox('Match Type', load_dropdown_values('match_type'))
             if not match_type:
                     match_type = None
 
@@ -30,8 +30,8 @@ def venue_search():
         overs_to = None
 
         # Call load_dropdown_values function once for each category
-        series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = dropdown_values('TournamentName')
+        series_name_options = load_dropdown_values('series_name')
+        tournament_name_options = dropdown_values('tournament_name')
 
         if adv:
             col1, col2, col3 = st.columns(3)
