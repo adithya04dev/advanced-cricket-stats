@@ -505,8 +505,10 @@ l=['venue', 'series_name',  'tournament_name',   'match_type',  'team_bat',  'te
 
 def load_dropdown_values(column):
     values = []
-    file_path = os.path.join("vector_store_files", f"{column}.txt")
-
+    cwd = os.getcwd()
+    
+    # Construct the absolute file path using os.path.join
+    file_path = os.path.join(cwd, "vector_store_files", f"{column}.txt")
     # Load the list values from a .txt file
     with open(file_path, "r") as f:
         for line in f:
