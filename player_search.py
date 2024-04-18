@@ -7,11 +7,11 @@ def player_search():
     def get_user_inputs():
         col1, col2, col3 = st.columns(3)
         with col1:
-            player_name = st.selectbox('Player Name', load_dropdown_values('Batsman')+load_dropdown_values('Bowler'))
+            player_name = st.selectbox('Player Name', load_dropdown_values('batter')+load_dropdown_values('bowler'))
         with col2:
             stats_type = st.selectbox('Stats Type', ['batting', 'bowling'])
         with col3:
-            match_type = st.selectbox('Match Type', load_dropdown_values('MatchType'))
+            match_type = st.selectbox('Match Type', load_dropdown_values('match_type'))
         with col1:
             group_by = st.selectbox('Group By', ['Season','Venue', 'LeagueName', 'BattingType', 'BowlingType'])
         adv = st.checkbox('Advanced Options')
@@ -30,12 +30,12 @@ def player_search():
         overs_to = None
 
         # Call load_dropdown_values function once for each category
-        series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = load_dropdown_values('TournamentName')
-        player_team_options = load_dropdown_values('BattingTeam')
-        opp_player_team_options = load_dropdown_values('BowlingTeam')
-        batter_type_options = load_dropdown_values('BattingType') if stats_type == 'batting' else load_dropdown_values('BowlingType')
-        bowler_type_options = load_dropdown_values('BowlingType') if stats_type == 'batting' else load_dropdown_values('BattingType')
+        series_name_options = load_dropdown_values('series_name')
+        tournament_name_options = load_dropdown_values('tournament_name')
+        player_team_options = load_dropdown_values('team_bat')
+        opp_player_team_options = load_dropdown_values('team_bowl')
+        batter_type_options = load_dropdown_values('batter_type') if stats_type == 'batting' else load_dropdown_values('bowler_type')
+        bowler_type_options = load_dropdown_values('bowler_type') if stats_type == 'bowler' else load_dropdown_values('batter_type')
 
         if adv:
             col1, col2, col3 = st.columns(3)
