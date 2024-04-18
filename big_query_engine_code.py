@@ -75,7 +75,7 @@ def convert_to_sql_query(params):
     if date_from is not None :
         condition += f" AND date >= '{date_from}'"
     if date_to is not None:
-        condition += f" AND Date <= '{date_to}'"
+        condition += f" AND date <= '{date_to}'"
     if series_name is not None:
         condition += f" AND series_name IN {series_name}"
     if tournament_name is not None:
@@ -93,7 +93,7 @@ def convert_to_sql_query(params):
     if bowler_team  is not None:
         condition += f" AND tram_bowl IN {bowler_team}"
     if batter_type is not None:
-        condition += f" AND batter_type IN {batter_type}"
+        condition += f" AND batter_hand IN {batter_type}"
     if bowler_type is not None:
         condition += f" AND bowler_type IN {bowler_type}"
     if venue is not None:
