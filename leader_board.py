@@ -15,7 +15,7 @@ def leader_board():
         with col2:
             stats_type = st.selectbox('Stats Type', ['batting', 'bowling'])
         with col3:
-            match_type = st.selectbox('Match Type',load_dropdown_values('MatchType'))
+            match_type = st.selectbox('Match Type',load_dropdown_values('match_type'))
 
         adv = st.checkbox('Advanced Options')
 
@@ -31,18 +31,18 @@ def leader_board():
         overs_from = None
         overs_to = None
 
-        series_name_options = load_dropdown_values('SeriesName')
+        series_name_options = load_dropdown_values('series_name')
         # tournament_name_options = dropdown_values('TournamentName')
-        tournament_name_options = load_dropdown_values('TournamentName')
-        player_team_options = load_dropdown_values('BattingTeam')
-        opp_player_team_options = load_dropdown_values('BowlingTeam')
-        venue_options = load_dropdown_values('Venue')
+        tournament_name_options = load_dropdown_values('tournament_name')
+        player_team_options = load_dropdown_values('team_bat')
+        opp_player_team_options = load_dropdown_values('team_bowl')
+        venue_options = load_dropdown_values('venue')
         if stats_type == 'batting':
-            player_type_options = load_dropdown_values('BattingType')
-            opp_player_type_options = load_dropdown_values('BowlingType')
+            player_type_options = load_dropdown_values('batter_type')
+            opp_player_type_options = load_dropdown_values('bowler_type')
         elif stats_type == 'bowling':
-            player_type_options = load_dropdown_values('BowlingType')
-            opp_player_type_options = load_dropdown_values('BattingType')
+            player_type_options = load_dropdown_values('bowler_type')
+            opp_player_type_options = load_dropdown_values('batter_type')
 
 
 
