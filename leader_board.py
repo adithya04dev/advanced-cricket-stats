@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from stats import calculate_leaderboard_stats
 from big_query_engine_code import dropdown_values
 
 from big_query_engine_code import load_dropdown_values
