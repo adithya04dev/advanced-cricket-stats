@@ -13,7 +13,7 @@ credentials_bytes = base64.b64decode(credentials_b64)
 credentials_dict = json.loads(credentials_bytes)
 
 # Create a Credentials object from the loaded dictionary
-credentials = service_account.Credentials.from_service_account_info(credentials_dict,credentials=credentials)
+credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
 
 import pandas as pd
@@ -22,7 +22,7 @@ from google.cloud import bigquery
 def query_to_dataframe( query):
     project_id = 'adept-cosine-420005'
 
-    client = bigquery.Client(project=project_id)
+    client = bigquery.Client(project=project_id,credentials=credentials)
 
     # Execute the query
     query_job = client.query(query)
