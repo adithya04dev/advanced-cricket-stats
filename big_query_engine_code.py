@@ -3,26 +3,11 @@ import os
 
 import pandas as pd
 from google.cloud import bigquery
-import os
-import base64
-import json
-import google.auth
-from google.oauth2 import service_account
-from google.cloud import bigquery
-
-# Load the credentials from the environment variable
-credentials_b64 = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
-credentials_bytes = base64.b64decode(credentials_b64)
-credentials_dict = json.loads(credentials_bytes)
-
-# Create a Credentials object from the loaded dictionary
-credentials = service_account.Credentials.from_service_account_info(credentials_dict)
-
 
 def query_to_dataframe( query):
     project_id = 'adept-cosine-420005'
 
-    client = bigquery.Client(project=project_id,credentials=credentials)
+    client = bigquery.Client(project=project_id)
 
     # Execute the query
     query_job = client.query(query)
@@ -50,7 +35,7 @@ params = {
 }
 def convert_to_sql_query(params):
     # Standardize input parameters
-    for key in ['batter_name','bowler_name','inninggs_number','venue','batter_team', 'bowler_team', 'series_name', 'tournament_name',  'batter_type','bowler_type']:
+    for key in ['batter_name','bowler_name','inninggs_number','venue','batter_team', 'bowler_team', 'series_name', 'tournament_name', 'venue', 'batter_type','bowler_type']:
         if key in params and isinstance(params[key], list):
             params[key] = tuple(params[key])
             # print("hello")
@@ -85,36 +70,36 @@ def convert_to_sql_query(params):
     condition=''
 
     if match_type !=None:
-        condition+= f"MatchType = '{match_type}'"
+        condition+= f"match_type = '{match_type}'"
 
     if date_from is not None :
-        condition += f" AND Date >= '{date_from}'"
+        condition += f" AND date >= '{date_from}'"
     if date_to is not None:
         condition += f" AND Date <= '{date_to}'"
     if series_name is not None:
-        condition += f" AND SeriesName IN {series_name}"
+        condition += f" AND series_name IN {series_name}"
     if tournament_name is not None:
-        condition += f" AND TournamentName IN {tournament_name}"
+        condition += f" AND tournament_name IN {tournament_name}"
     if venue is not None:
-        condition += f" AND Venue IN {venue}"
+        condition += f" AND venue IN {venue}"
     if overs_from is not None and overs_to is not None:
-        condition += f" AND Over_Number BETWEEN {overs_from} AND {overs_to}"
+        condition += f" AND overs BETWEEN {overs_from} AND {overs_to}"
     if batter_name is not None:
-        condition += f" AND Batsman IN {batter_name}"
+        condition += f" AND batter IN {batter_name}"
     if bowler_name is not None:
-        condition += f" AND Bowler IN {bowler_name}"
+        condition += f" AND bowler IN {bowler_name}"
     if batter_team is not None:
-        condition += f" AND BattingTeam IN {batter_team}"
+        condition += f" AND team_bat IN {batter_team}"
     if bowler_team  is not None:
-        condition += f" AND BowlingTeam IN {bowler_team}"
+        condition += f" AND tram_bowl IN {bowler_team}"
     if batter_type is not None:
-        condition += f" AND BowlingType IN {batter_type}"
+        condition += f" AND bowling_type IN {batter_type}"
     if bowler_type is not None:
-        condition += f" AND BowlingType IN {bowler_type}"
+        condition += f" AND bowling_type IN {bowler_type}"
     if venue is not None:
-        condition += f" AND Venue IN {venue}"
+        condition += f" AND venue IN {venue}"
     if inninggs_number is not None:
-        condition += f" AND InningsNumber IN {inninggs_number}"
+        condition += f" AND inngs IN {inninggs_number}"
     condition=condition.replace(',)',')')
     if match_type ==None:
         condition =condition.replace('AND',' ',1)
@@ -126,16 +111,16 @@ def convert_to_sql_query(params):
                 sql_query = f"""
                 WITH stats AS (
                 SELECT
-                    Batsman,
-                    COUNT(DISTINCT Matchno) AS Innings,
-                    SUM(Batsman_Run) AS Runs,
-                    SUM(is_ball_int) AS BallsFaced,
-                    SUM(is_batter_out) AS Outs,
-                    SUM(is_dot) AS DotBallsFaced,
-                    SUM(is_boundary) AS BoundaryBalls
+                    batter as Batsman,
+                    COUNT(DISTINCT match_no) AS Innings,
+                    SUM(batter_runs) AS Runs,
+                    SUM(balls_faced) AS BallsFaced,
+                    SUM(batter_out) AS Outs,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
-                GROUP BY Batsman
+                GROUP BY batter
                 ),
                 calculations AS (
                 SELECT
@@ -167,16 +152,16 @@ def convert_to_sql_query(params):
                 sql_query = f"""
                 WITH stats AS (
                 SELECT
-                    Bowler,
-                    COUNT(DISTINCT Matchno) AS Innings,
-                    SUM(is_bowler_wicket) AS Wickets,
-                    SUM(TotalRuns) AS RunsConceded,
-                    SUM(is_ball_int) AS BallsBowled,
-                    SUM(is_dot) AS DotBallsBowled,
-                    SUM(is_boundary) AS BoundaryBalls
+                    bowler as Bowler,
+                    COUNT(DISTINCT match_no) AS Innings,
+                    SUM(out) AS Wickets,
+                    SUM(score) AS RunsConceded,
+                    SUM(balls_faced) AS BallsBowled,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
-                GROUP BY Bowler
+                GROUP BY bowler
                 ),
                 calculations AS (
                 SELECT
@@ -209,13 +194,13 @@ def convert_to_sql_query(params):
                 sql_query = f"""
                 WITH stats AS (
                 SELECT
-                    BattingTeam,
-                    COUNT(DISTINCT Matchno) AS Innings,
-                    SUM(Batsman_Run) AS Runs,
-                    SUM(is_ball_int) AS BallsFaced,
-                    SUM(is_batter_out) AS Outs,
-                    SUM(is_dot) AS DotBallsFaced,
-                    SUM(is_boundary) AS BoundaryBalls
+                    team_bat as BattingTeam,
+                    COUNT(DISTINCT match_no) AS Innings,
+                    SUM(score) AS Runs,
+                    SUM(balls_faced) AS BallsFaced,
+                    SUM(out) AS Outs,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY BattingTeam
@@ -250,13 +235,13 @@ def convert_to_sql_query(params):
                 sql_query = f"""
                 WITH stats AS (
                 SELECT
-                    BowlingTeam,
-                    COUNT(DISTINCT Matchno) AS Innings,
-                    SUM(is_bowler_wicket) AS Wickets,
-                    SUM(TotalRuns) AS RunsConceded,
-                    SUM(is_ball_int) AS BallsBowled,
-                    SUM(is_dot) AS DotBallsBowled,
-                    SUM(is_boundary) AS BoundaryBalls
+                    team_bowl as BowlingTeam,
+                    COUNT(DISTINCT match_no) AS Innings,
+                    SUM(out) AS Wickets,
+                    SUM(score) AS RunsConceded,
+                    SUM(balls_faced) AS BallsBowled,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY BowlingTeam
@@ -292,7 +277,9 @@ def convert_to_sql_query(params):
         if stats_type == 'batting':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT Matchno) as Innings, SUM(Batsman_Run) as Runs, SUM(is_ball_int) as BallsFaced, SUM(is_batter_out) as Outs, SUM(is_dot) as DotBallsFaced, SUM(is_boundary) as BoundaryBalls
+                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(Batsman_Run) as Runs, SUM(balls_faced) as BallsFaced, SUM(batter_out) as Outs,
+                        SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY {group_by}
@@ -308,13 +295,16 @@ def convert_to_sql_query(params):
         elif stats_type == 'bowling':
             sql_query = f"""
             WITH stats AS (
-                SELECT Bowler, COUNT(DISTINCT Matchno) as Innings, SUM(is_bowler_wicket) as Wickets, SUM(TotalRuns) as RunsConceded, SUM(is_ball_int) as BallsBowled, SUM(is_dot) as DotBallsBowled, SUM(is_boundary) as BoundaryBalls
+                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(out) as Wickets, SUM(bowler_runs) as RunsConceded, 
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY {group_by}
             ),
             calculations AS (
-                SELECT Bowler, Innings, Wickets, RunsConceded, BallsBowled, Wickets / NULLIF(Innings, 0) AS Average, (RunsConceded / BallsBowled) * 6 AS EconomyRate, (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage, (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
+                SELECT  Innings, Wickets, RunsConceded, BallsBowled, Wickets / NULLIF(Innings, 0) AS Average,
+                  (RunsConceded / BallsBowled) * 6 AS EconomyRate, (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage, (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
                 FROM stats
             )
             SELECT Bowler, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
@@ -327,12 +317,12 @@ def convert_to_sql_query(params):
         WITH stats AS (
         SELECT {group_by},
             
-            COUNT(DISTINCT Matchno) as Innings,
-            SUM(Batsman_Run) as Runs,
-            SUM(is_ball_int) as BallsFaced,
-            SUM(is_batter_out) as Outs,
-            SUM(is_dot) as DotBallsFaced,
-            SUM(is_boundary) as BoundaryBalls
+            COUNT(DISTINCT match_no ) as Innings,
+            SUM(batter_runs) as Runs,
+            SUM(balls_faced) as BallsFaced,
+            SUM(batter_out) as Outs,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
         FROM {database}.{table}
         WHERE {condition}
         GROUP BY {group_by}
@@ -366,15 +356,15 @@ def convert_to_sql_query(params):
         sql_query = f"""
         WITH stats AS (
           SELECT
-            BowlingType,
-            SUM(Batsman_Run) as Runs,
-            SUM(is_ball_int) as Balls,
-            SUM(is_batter_out) as Outs,
-            SUM(is_dot) as DotBalls,
-            SUM(is_boundary) as BoundaryBalls
+            bowler_type as BowlingType,
+            SUM(batter_runs) as Runs,
+            SUM(balls_faced) as Balls,
+            SUM(out) as Outs,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBalls,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
           FROM {database}.{table}
           WHERE {condition}
-          GROUP BY BowlingType
+          GROUP BY bowler_type
         ),
         calculations AS (
           SELECT
@@ -406,16 +396,16 @@ def convert_to_sql_query(params):
             sql_query = f"""
             WITH stats AS (
               SELECT
-                Batsman,
-                COUNT(DISTINCT Matchno) as Innings,
-                SUM(Batsman_Run) as Runs,
-                SUM(is_ball_int) as BallsFaced,
-                SUM(is_batter_out) as Outs,
-                SUM(is_dot) as DotBallsFaced,
-                SUM(is_boundary) as BoundaryBalls
+                batter as Batsman,
+                COUNT(DISTINCT  match_no) as Innings,
+                SUM(batter_runs) as Runs,
+                SUM(balls_faced) as BallsFaced,
+                SUM(out) as Outs,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
               FROM {database}.{table}
               WHERE {condition}
-              GROUP BY Batsman
+              GROUP BY batter
             ),
             calculations AS (
               SELECT
@@ -447,16 +437,15 @@ def convert_to_sql_query(params):
             sql_query = f"""
             WITH stats AS (
               SELECT
-                Bowler,
-                COUNT(DISTINCT Matchno) as Innings,
-                SUM(is_bowler_wicket) as Wickets,
-                SUM(TotalRuns) as RunsConceded,
-                SUM(is_ball_int) as BallsBowled,
-                SUM(is_dot) as DotBallsBowled,
-                SUM(is_boundary) as BoundaryBalls
-              FROM {database}.{table}
+                bowler as Bowler,
+                COUNT(DISTINCT match_no) as Innings,
+                SUM(batter_out) as Wickets,
+                SUM(bowler_runs) as RunsConceded,
+                SUM(balls_faced) as BallsBowled,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
+                    SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
               WHERE {condition}
-              GROUP BY Bowler
+              GROUP BY bowler
             ),
             calculations AS (
               SELECT
@@ -489,9 +478,9 @@ def convert_to_sql_query(params):
         
     return sql_query
 
-query=convert_to_sql_query(params)
-df = query_to_dataframe( query)
-# print(query)
+# query=convert_to_sql_query(params)
+# df = query_to_dataframe( query)
+# # print(query)
 
 def dropdown_values(column):
     query = f"""
@@ -502,24 +491,28 @@ def dropdown_values(column):
     values = df[column].tolist()
 
     # Save the list values to a .txt file
-    with open(f"{column}.txt", "w") as f:
+    with open(fr"C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\vector_store_files\{column}.txt", "w") as f:
         for value in values:
             f.write(f"{value}\n")
     if None in values:
         values.remove(None)
 
     return values
-
+l=['venue', 'series_name',  'tournament_name',   'match_type',  'team_bat',  'team_bowl',  'batter',  'bowler', 'bowler_type', 
+   'bowler_kind','batter_hand']
 
 def load_dropdown_values(column):
     values = []
 
     # Load the list values from a .txt file
-    with open(f"{column}.txt", "r") as f:
+    with open(rf".\vector_store_files\{column}.txt", "r") as f:
         for line in f:
             values.append(line.strip())
 
     return values
+# for lis in l:
+
+#     df=dropdown_values(lis)
 
 def calculate_stats(params):
     query = convert_to_sql_query(params)
