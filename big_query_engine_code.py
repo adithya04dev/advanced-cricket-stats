@@ -491,6 +491,8 @@ def dropdown_values(column):
     values = df[column].tolist()
 
     # Save the list values to a .txt file
+    file_path = os.path.join("vector_store_files", f"{column}.txt")
+
     with open(fr"C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\vector_store_files\{column}.txt", "w") as f:
         for value in values:
             f.write(f"{value}\n")
@@ -503,9 +505,10 @@ l=['venue', 'series_name',  'tournament_name',   'match_type',  'team_bat',  'te
 
 def load_dropdown_values(column):
     values = []
+    file_path = os.path.join("vector_store_files", f"{column}.txt")
 
     # Load the list values from a .txt file
-    with open(rf"vector_store_files/{column}.txt", "r") as f:
+    with open(file_path, "r") as f:
         for line in f:
             values.append(line.strip())
 
