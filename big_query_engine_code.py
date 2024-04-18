@@ -505,7 +505,7 @@ def load_dropdown_values(column):
     values = []
 
     # Load the list values from a .txt file
-    with open(rf"./vector_store_files/{column}.txt", "r") as f:
+    with open(rf"vector_store_files/{column}.txt", "r") as f:
         for line in f:
             values.append(line.strip())
 
