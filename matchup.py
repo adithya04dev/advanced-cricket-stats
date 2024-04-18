@@ -1,5 +1,4 @@
 import pandas as pd
-from stats import calculate_matchup_stats
 import streamlit as st
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import calculate_stats
