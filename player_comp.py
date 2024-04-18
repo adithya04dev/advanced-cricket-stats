@@ -7,11 +7,11 @@ def player_comp():
     def get_user_inputs():
         col1, col2, col3 = st.columns(3)
         with col1:
-            player_name = st.multiselect('Player Name', load_dropdown_values('Batsman'))
+            player_name = st.multiselect('Player Name', load_dropdown_values('batter'))
         with col2:
             stats_type = st.selectbox('Stats Type', ['batting', 'bowling'])
         with col3:
-            match_type = st.selectbox('Match Type',load_dropdown_values('MatchType'))
+            match_type = st.selectbox('Match Type',load_dropdown_values('match_type'))
 
         adv = st.checkbox('Advanced Options')
 
@@ -29,13 +29,13 @@ def player_comp():
         overs_to = None
 
         # Call load_dropdown_values function once for each category
-        series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = load_dropdown_values('TournamentName')
-        player_team_options = load_dropdown_values('BattingTeam')
-        opp_player_team_options = load_dropdown_values('BowlingTeam')
-        venue_options = load_dropdown_values('Venue')
-        batter_type_options = load_dropdown_values('BattingType') if stats_type == 'batting' else load_dropdown_values('BowlingType')
-        bowler_type_options = load_dropdown_values('BowlingType') if stats_type == 'batting' else load_dropdown_values('BattingType')
+        series_name_options = load_dropdown_values('series_name')
+        tournament_name_options = load_dropdown_values('tournament_name')
+        player_team_options = load_dropdown_values('team_bat')
+        opp_player_team_options = load_dropdown_values('team_bowl')
+        venue_options = load_dropdown_values('venue')
+        batter_type_options = load_dropdown_values('batter_type') if stats_type == 'batting' else load_dropdown_values('bowler_type')
+        bowler_type_options = load_dropdown_values('bowler_type') if stats_type == 'batting' else load_dropdown_values('batter_type')
 
         if adv:
             col1, col2 = st.columns(2)
