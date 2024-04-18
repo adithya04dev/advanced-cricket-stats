@@ -37,11 +37,11 @@ def leader_board():
         opp_player_team_options = load_dropdown_values('team_bowl')
         venue_options = load_dropdown_values('venue')
         if stats_type == 'batting':
-            player_type_options = load_dropdown_values('batter_type')
+            player_type_options = load_dropdown_values('batter_hand')
             opp_player_type_options = load_dropdown_values('bowler_type')
         elif stats_type == 'bowling':
             player_type_options = load_dropdown_values('bowler_type')
-            opp_player_type_options = load_dropdown_values('batter_type')
+            opp_player_type_options = load_dropdown_values('batter_hand')
 
 
 
