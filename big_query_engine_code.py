@@ -172,7 +172,7 @@ def convert_to_sql_query(params):
                     SUM(out) AS Wickets,
                     SUM(score) AS RunsConceded,
                     SUM(balls_faced) AS BallsBowled,
-                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
+                    SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
                     SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
                 WHERE {condition}
