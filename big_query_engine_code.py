@@ -1,5 +1,20 @@
 import os
 
+import pandas as pd
+from google.cloud import bigquery
+import base64
+import json
+import google.auth
+from google.oauth2 import service_account
+
+# Load the credentials from the environment variable
+credentials_b64 = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+credentials_bytes = base64.b64decode(credentials_b64)
+credentials_dict = json.loads(credentials_bytes)
+
+# Create a Credentials object from the loaded dictionary
+credentials = service_account.Credentials.from_service_account_info(credentials_dict)
+
 
 import pandas as pd
 from google.cloud import bigquery
