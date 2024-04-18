@@ -93,9 +93,9 @@ def convert_to_sql_query(params):
     if bowler_team  is not None:
         condition += f" AND tram_bowl IN {bowler_team}"
     if batter_type is not None:
-        condition += f" AND bowling_type IN {batter_type}"
+        condition += f" AND batter_type IN {batter_type}"
     if bowler_type is not None:
-        condition += f" AND bowling_type IN {bowler_type}"
+        condition += f" AND bowler_type IN {bowler_type}"
     if venue is not None:
         condition += f" AND venue IN {venue}"
     if inninggs_number is not None:
