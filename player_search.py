@@ -33,8 +33,8 @@ def player_search():
         tournament_name_options = load_dropdown_values('tournament_name')
         player_team_options = load_dropdown_values('team_bat')
         opp_player_team_options = load_dropdown_values('team_bowl')
-        batter_type_options = load_dropdown_values('batter_type') if stats_type == 'batting' else load_dropdown_values('bowler_type')
-        bowler_type_options = load_dropdown_values('bowler_type') if stats_type == 'bowler' else load_dropdown_values('batter_type')
+        batter_type_options = load_dropdown_values('batter_hand') if stats_type == 'batting' else load_dropdown_values('bowler_type')
+        bowler_type_options = load_dropdown_values('bowler_type') if stats_type == 'bowler' else load_dropdown_values('batter_hand')
 
         if adv:
             col1, col2, col3 = st.columns(3)
