@@ -8,9 +8,9 @@ def matchup():
     def get_user_inputs():
         col1, col2, col3 = st.columns(3)
         with col1:
-            batter_name = st.multiselect('Batter Name', dropdown_values('Batsman'))
+            batter_name = st.multiselect('Batter Name', load_dropdown_values('batter'))
         with col2:
-            bowler_name = st.multiselect('Bowler Name', dropdown_values('Bowler'))
+            bowler_name = st.multiselect('Bowler Name', load_dropdown_values('bowler'))
         with col3:
             group_by = st.selectbox('Group By', ['TournamentName', 'Venue', 'Batsman', 'Bowler'])
         adv = st.checkbox('Advanced Options')
@@ -25,9 +25,9 @@ def matchup():
         overs_to = None
 
         # Call load_dropdown_values function once for each category
-        series_name_options = load_dropdown_values('SeriesName')
-        tournament_name_options = load_dropdown_values('TournamentName')
-        venue_options = load_dropdown_values('Venue')
+        series_name_options = load_dropdown_values('series_name')
+        tournament_name_options = load_dropdown_values('tournament_name')
+        venue_options = load_dropdown_values('venue')
 
         if adv:
             col1, col2= st.columns(2)
