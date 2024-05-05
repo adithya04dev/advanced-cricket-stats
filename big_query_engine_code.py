@@ -106,7 +106,7 @@ def convert_to_sql_query(params):
     if batter_team is not None:
         condition += f" AND team_bat IN {batter_team}"
     if bowler_team  is not None:
-        condition += f" AND tram_bowl IN {bowler_team}"
+        condition += f" AND team_bowl IN {bowler_team}"
     if batter_type is not None:
         condition += f" AND batter_hand IN {batter_type}"
     if bowler_type is not None:
@@ -114,7 +114,7 @@ def convert_to_sql_query(params):
     if venue is not None:
         condition += f" AND venue IN {venue}"
     if inninggs_number is not None:
-        condition += f" AND inngs IN {inninggs_number}"
+        condition += f" AND inngs IN {inngs}"
     condition=condition.replace(',)',')')
     if match_type ==None:
         condition =condition.replace('AND',' ',1)
