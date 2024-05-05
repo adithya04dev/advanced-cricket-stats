@@ -525,7 +525,7 @@ def load_dropdown_values(column):
     # Construct the absolute file path using os.path.join
     file_path = os.path.join(cwd, "dropdown_values", f"{column}.txt")
     # Load the list values from a .txt file
-    with open(file_path, "r") as f:
+    with open(file_path, 'r', encoding='latin-1') as f:
         for line in f:
             values.append(line.strip())
 
