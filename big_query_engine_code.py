@@ -523,7 +523,7 @@ def load_dropdown_values(column):
     cwd = os.getcwd()
     
     # Construct the absolute file path using os.path.join
-    file_path = os.path.join(cwd, "vector_store_files", f"{column}.txt")
+    file_path = os.path.join(cwd, "dropdown_values", f"{column}.txt")
     # Load the list values from a .txt file
     with open(file_path, "r") as f:
         for line in f:
