@@ -456,7 +456,7 @@ def convert_to_sql_query(params):
 # # print(query)
 
 def dropdown_values(column):
-    query = f"""    SELECT DISTINCT {column}    FROM bbbdata.ballsnew    """
+    query = f"    SELECT DISTINCT {column}    FROM bbbdata.ballsnew    "
     df = query_to_dataframe(query)
     values = df[column].tolist()
 
