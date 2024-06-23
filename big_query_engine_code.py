@@ -446,7 +446,7 @@ def convert_to_sql_query(params):
                 FROM {database}.{table}
                 WHERE {condition}
                 GROUP BY {group_by}
-           
+           """
 
         
     return sql_query
