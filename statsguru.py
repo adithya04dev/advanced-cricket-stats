@@ -187,7 +187,7 @@ def router(inp):
 def query_to_dataframe(queryl):
     project_id = 'adept-cosine-420005'
     query=queryl[0]
-    client = bigquery.Client(project=project_id)
+    client = bigquery.Client(project=project_id,,credentials=credentials)
     try:
         query_job = client.query(query)
         query_job.result()
