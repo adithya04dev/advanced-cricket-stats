@@ -4,3 +4,8 @@ numpy
 plotly
 google-cloud-bigquery[pandas]
 db_dtypes
+langchain
+langchain-core
+langchain-together
+google-generativeai
+langgraph
