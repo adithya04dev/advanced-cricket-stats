@@ -121,7 +121,7 @@ def find_references(user_query):
     print(res_gem)
     res_gem+='\n\n'
     return {'response':res_gem,'query':user_query,'f':None}
-with open("sample_code.txt","r") as f:
+with open("sample_codes.txt","r") as f:
   sample_codes=f.read()
 
 task=""" 
