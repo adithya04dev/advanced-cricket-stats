@@ -57,7 +57,8 @@ def convert_to_sql_query(params):
 
     # Build the SQL query
     database ='bbbdata'
-    table = 'ballsnew'
+    # table = 'ballsnew'
+    table='ballsnew_2406'
 
     function_type = params.get('function_type')
     analysis_type = params.get('analysis_type')
@@ -114,7 +115,7 @@ def convert_to_sql_query(params):
     if venue is not None:
         condition += f" AND venue IN {venue}"
     if inninggs_number is not None:
-        condition += f" AND inngs IN {inngs}"
+        condition += f" AND current_match_inning_number IN {inninggs_number}"
     condition=condition.replace(',)',')')
     if match_type ==None:
         condition =condition.replace('AND',' ',1)
