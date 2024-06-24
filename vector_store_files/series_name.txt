@@ -1,4 +1,6 @@
- 2009
+this column series_name column in database just combines tournament_name and season ..Thus for queries involving general name of event use tournament name column and search from those valuefor filling correct_refernces ,or else if specific years/seasons mention use the below  series_name values for filling correct_refernces.
+
+2009
  2012/13
  2013/14
 Asia Cup 2023
@@ -933,7 +935,7 @@ Australia in South Africa Test Series 2013/14
 Bangladesh in New Zealand Test Series 2007/08
 ICC Men's Cricket World Cup Super League 2023
 ICC Men's T20 World Cup Asia B Qualifier 2023
-ICC Men’s T20 World Cup Qualifier A 2021/22
+ICC MenÂ’s T20 World Cup Qualifier A 2021/22
 ICC World Cricket League Division Two 2017/18
 South Africa tour of England and Ireland 2003
 South Africa in Bangladesh Test Series 2007/08
@@ -944,7 +946,7 @@ Papua New Guinea in Hong Kong ODI Series 2016/17
 ICC World Twenty20 Asia Region Qualifier B 2018/19
 United Arab Emirates v Afghanistan ODI Series 2014/15
 Cricket Ireland Inter-Provincial Limited Over Cup 2023
-ICC Men’s T20 World Cup Asia Qualifier Final 2023/24
+ICC MenÂ’s T20 World Cup Asia Qualifier Final 2023/24
 ICC Men's T20 World Cup Africa Region Qualifier 2023/24
 ICC World Twenty20 Americas Sub Regional Qualifier A 2018/19
 ICC Men's T20 World Cup Sub Regional Africa Qualifier 2022/23
