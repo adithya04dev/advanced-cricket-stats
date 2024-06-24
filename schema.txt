@@ -1,48 +1,47 @@
-venue STRING
-series_name STRING
-tournament_name STRING
-season STRING
-date DATE
-ball INTEGER
-match_type STRING
-match_no INTEGER
-team_bat STRING
-team_bowl STRING
-winner STRING
-toss STRING
-match_outcome STRING
-target STRING
-max_balls STRING
-margin_runs INTEGER
-wides INTEGER
-noballs INTEGER
-byes INTEGER
-legbyes INTEGER
-penalty INTEGER
-margin_wkts INTEGER
-inngs INTEGER
-overs INTEGER
-batter_runs INTEGER
-extras_runs INTEGER
-score INTEGER
-player_out STRING
-out INTEGER
-dismissal STRING
-batter_out INTEGER
-balls_faced INTEGER
-batter_hand_orig STRING
-batter STRING
-bowler_type_orig STRING
-bowler STRING
-bowler_type STRING
-batter_hand STRING
-bowler_runs INTEGER
-bowler_kind STRING
-curr_inngs_score INTEGER
-curr_inngs_balls INTEGER
-curr_inngs_wkts INTEGER
-curr_batter_runs INTEGER
-curr_batter_balls_faced INTEGER
-cur_bowler_runs INTEGER
-curr_bowler_balls_bowled INTEGER
-curr_bowler_wickets INTEGER
+
+1. series_name STRING
+2. tournament_name STRING
+3. season STRING
+4. date DATE
+5. ball INTEGER
+6. match_type STRING
+7. match_no INTEGER
+8. team_bat STRING
+9. team_bowl STRING
+10. winner STRING
+11. toss STRING
+12. match_outcome STRING
+13. target STRING
+14. max_balls STRING
+15. wides INTEGER
+16. noballs INTEGER
+17. byes INTEGER
+18. legbyes INTEGER
+19. penalty INTEGER
+20. current_match_inning_number INTEGER
+21. overs INTEGER
+22. Batsman_id STRING
+23. Bowler_id STRING
+24. batter_runs INTEGER
+25. extras_runs INTEGER
+26. score INTEGER
+27. player_out STRING
+28. out INTEGER
+29. dismissal STRING
+30. balls_faced INTEGER
+31. bowler_runs INTEGER
+32. batter_out INTEGER
+33. batter_hand STRING
+34. batter STRING
+35. bowler_type STRING
+36. bowler STRING
+37. bowler_kind STRING
+38. curr_inngs_score INTEGER
+39. curr_inngs_balls INTEGER
+40. curr_inngs_wkts INTEGER
+41. curr_batter_runs FLOAT
+42. curr_batter_balls_faced FLOAT
+43. cur_bowler_runs FLOAT
+44. curr_bowler_balls_bowled FLOAT
+45. curr_bowler_wickets FLOAT
+
