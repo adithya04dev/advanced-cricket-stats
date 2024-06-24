@@ -27,5 +27,5 @@ elif option == 'Player Search':
 elif option == 'Venue Search':
     venue_search()
 question=st.text_input("Enter Your Query")
-if question:
+if st.button('Ask AI',key='l'):
     ask(question)
