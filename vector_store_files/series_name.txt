@@ -1,4 +1,4 @@
-this column series_name column in database just combines tournament_name and season ..Thus for queries involving general name of event use tournament name column and search from those valuefor filling correct_refernces ,or else if specific years/seasons mention use the below  series_name values for filling correct_refernces.
+this column series_name  in database just combines tournament_name and season ..Thus for queries involving general name of event use tournament name column and search from those valuefor filling correct_refernces ,or else if specific years/seasons mention use the below  series_name values for filling correct_refernces.
 
 2009
  2012/13
