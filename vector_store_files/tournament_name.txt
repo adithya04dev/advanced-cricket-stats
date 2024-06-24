@@ -1,4 +1,4 @@
-this column tournament column in database only inclues  tournament_name(i.e the event name) not its specifc seasonor year ..Thus for queries involving general name of event use tournament name column and search from below valus efor filling correct_refernces ,
+this column tournament_name  in database only inclues  tournament_name(i.e the event name) not its specifc seasonor year ..Thus for queries involving general name of event use tournament name column and search from below valus efor filling correct_refernces ,
 or else if specific years/seasons mention use the series_name values for filling correct_refernces.
 Future Cup
 Videocon Cup
