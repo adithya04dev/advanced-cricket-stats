@@ -9,3 +9,4 @@ langchain-core
 langchain-together
 google-generativeai
 langgraph
+langchain-community
