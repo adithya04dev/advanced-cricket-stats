@@ -90,7 +90,7 @@ Dont return SQL query return json with correct references.
 """
 prompt2="""  
 Imagine yourself as a sql assitant who writes sql code for calculating stats based on user query in a cricket database.
-I have a ball by ball bigquery database named bbbdata.ballsnew of cricket matches..
+I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket matches..
 Schema of Database: {schema}
 User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}
