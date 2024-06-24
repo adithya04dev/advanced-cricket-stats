@@ -1,4 +1,5 @@
-None
+this column tournament column in database only inclues  tournament_name(i.e the event name) not its specifc seasonor year ..Thus for queries involving general name of event use tournament name column and search from below valus efor filling correct_refernces ,
+or else if specific years/seasons mention use the series_name values for filling correct_refernces.
 Future Cup
 Videocon Cup
 Balkan Cup
@@ -557,7 +558,7 @@ Scotland tour of United Arab Emirates
 Australia tour of United Arab Emirates
 Quadrangular Twenty20 Series (Hong Kong)
 Asian Cricket Council Men's Challenger Cup
-ICC Men’s T20 World Cup Asia Qualifier Final
+ICC MenÂ’s T20 World Cup Asia Qualifier Final
 ICC World Twenty20 East Asia-Pacific Region Final
 Sri Lanka tour of United Arab Emirates and Pakistan
 United States of America tour of United Arab Emirates
@@ -667,7 +668,7 @@ West Indies in Sri Lanka ODI Series
 Pakistan in South Africa T20I Series
 Quadrangular Twenty20 Series (Malaysia)
 West Indies in Australia T20I Series
-ICC Men’s T20 World Cup Qualifier A
+ICC MenÂ’s T20 World Cup Qualifier A
 Papua New Guinea in Hong Kong ODI Series
 ICC World Twenty20 Europe Region Qualifier A
 ICC World Twenty20 Europe Region Qualifier C
