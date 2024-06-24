@@ -1,0 +1,672 @@
+R Premadasa Stadium
+The Village, Malahide
+St George's Park, Gqeberha
+The Wanderers Stadium, Johannesburg
+The John Fretwell Sporting Complex, Sookholme
+Clifton Park Ground, York
+Trent Bridge, Nottingham
+Adelaide Oval
+W.A.C.A. Ground
+VRA Cricket Ground
+MA Chidambaram Stadium, Chepauk
+Mission Road Ground, Mong Kok
+Hong Kong Cricket Club
+The Royal & Sun Alliance County Ground, Bristol
+Pukekura Park
+Eden Park Outer Oval, Auckland
+Fitzherbert Park, Palmerston North
+St Lawrence Ground
+College Ground
+Queen's Park
+Achimota Senior Secondary School A Field, Accra
+Buffalo Park, East London
+De Beers Diamond Oval, Kimberley
+Sir Vivian Richards Stadium, North Sound
+National Cricket Stadium, St George's
+Brunton Memorial Ground, Radlett
+Kent County Cricket Ground
+Colin Maiden Park, Auckland
+North Sydney Oval, Sydney
+Scott Page Field, Vinor
+Chester Road North Ground, Kidderminster
+Western Australia Cricket Association Ground, Perth
+Selangor Turf Club
+Grainville, St Saviour
+Antigua Recreation Ground, St John's
+De Beers Diamond Oval
+Barabati Stadium
+Rajiv Gandhi International Stadium
+Queen's Park Oval, Port of Spain, Trinidad
+Saurashtra Cricket Association Stadium, Rajkot
+Cambusdoon New Ground
+Sardar Patel Stadium
+Jawaharlal Nehru Stadium
+Lalbhai Contractor Stadium
+Sri Ramachandra Medical College
+Bangabandhu National Stadium
+College Field
+Sheikh Abu Naser Stadium
+Nehru Stadium, Fatorda
+Sky Stadium
+ICC Academy, Dubai
+Iqbal Stadium, Faisalabad
+Old Hararians Sports Club
+Kwekwe Sports Club
+Ashlyns Road
+West Mersea Cricket Club
+Hare Field
+Cricket Field Lane
+Clontarf Cricket Club Ground, Dublin
+Grainville
+Centro Sportivo Ca'Nova
+Kinrara Oval
+Faleata Oval No 1
+White Hill Field, Sandys Parish
+Woodvale Road, Eglinton
+Church of Ireland Young Men's Society Cricket Club Ground, Belfast
+Mardyke, Cork
+Oak Hill Cricket Club
+Eden Park
+New Wanderers Stadium
+Seddon Park
+North Marine Road Ground, Scarborough
+Sophia Gardens, Cardiff
+Punjab Cricket Association IS Bindra Stadium, Mohali
+Bay Oval, Mount Maunganui
+Cobham Oval (New), Whangarei
+Molyneux Park, Alexandra
+Old Deer Park
+Merchant Taylors' School Ground
+Colin Maiden Park
+Fitzherbert Park
+Simonds Stadium, South Geelong, Victoria
+Traeger Park
+Nehru Stadium, Poona
+Gliderol Stadium, Adelaide
+Windsor Park, Roseau
+Green Park
+Himachal Pradesh Cricket Association Stadium, Dharamsala
+Wanderers
+Wanderers Cricket Ground, Windhoek
+Central Broward Regional Park Stadium Turf Ground, Lauderhill
+Gucherre Cricket Ground
+Brian Lara Stadium, Tarouba
+Vidarbha C.A. Ground
+College Field, St Peter Port
+Greater Noida Sports Complex Ground
+Welbeck Colliery Cricket Club Ground, Market Warsop
+Rugby School Ground
+Gorse Lane, Grantham
+Dr P.V.G. Raju ACA Sports Complex
+Holkar Stadium
+Airforce Complex ground, Palam
+BKC Ground
+ACA Stadium, Barsapara
+Zahur Ahmed Chowdhury Stadium, Chattogram
+Goldenacre
+Shaheed Veer Narayan Singh International Stadium, Raipur
+Maharani Usharaje Trust Cricket Ground
+Daren Sammy National Cricket Stadium, St Lucia
+National Cricket Stadium, St George's, Grenada
+Pierre Werner Cricket Ground
+Dubai Sports City Cricket Stadium
+Jade Stadium
+Bready Cricket Club, Magheramason, Bready
+Willowmoore Park C Field
+UKM-YSD Cricket Oval
+Chevrolet Park
+Tribhuvan University International Cricket Ground
+Faleata Oval No 2
+Ruaraka Sports Club Ground
+Tack-Tec Ground
+Friendship Oval
+New Williamfield No1 Oval
+Old Trafford
+Beausejour Stadium, Gros Islet
+Brabourne Stadium
+The Cooper Associates County Ground, Taunton
+Stanley Park, Blackpool
+Woodbridge Road, Guildford
+St Lawrence Ground, Canterbury
+Sylhet Stadium
+Himachal Pradesh Cricket Association Stadium
+Wankhede Stadium
+Hagley Oval
+Mainpower Oval
+Seddon Park, Hamilton
+McLean Park, Napier
+County Ground, New Road
+Aigburth
+Queen's Park, Chesterfield
+Queens Sports Club, Bulawayo
+Karori Park, Wellington
+Cobham Oval
+Manuka Oval
+Aurora Stadium
+Captain Roop Singh Stadium, Gwalior
+Trafalgar Road Ground, Southport
+Mangaung Oval, Bloemfontein
+La Manga Club Top Ground
+Church Street Park, Morrisville
+Tribhuvan University International Cricket Ground, Kirtipur
+Mulpani Cricket Ground
+Sawai Mansingh Stadium
+Arun Jaitley Stadium
+Narendra Modi Stadium, Ahmedabad
+Punjab Cricket Association IS Bindra Stadium, Mohali, Chandigarh
+Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur
+Nassau County International Cricket Stadium, New York
+Sinhalese Sports Club Ground
+Desert Springs Cricket Ground
+Castle Avenue
+Shere Bangla National Stadium, Mirpur
+The Cricket Field, Sedbergh School
+Europa Sports Complex
+Sinhalese Sports Club Ground, Colombo
+Sharad Pawar Cricket Academy BKC
+JU Second Campus, Salt Lake
+Dr. Gokaraju Laila Ganga Raju ACA Cricket Complex -CP Ground,Mulapadu
+GSSS, Sector 26
+F B Colony Ground
+Civil Service Cricket Club, Stormont, Belfast
+Sheikh Abu Naser Stadium, Khulna
+Sylhet International Cricket Stadium
+Toronto Cricket, Skating and Curling Club
+Antigua Recreation Ground
+Bulawayo Athletic Club
+ICC Academy Oval 2
+Sheikh Zayed Stadium Nursery 1
+Indian Association Ground
+Sedgars Park, Potchefstroom
+Sheikhupura Stadium
+Choice Moosa Stadium, Pearland
+Moosa Cricket Stadium, Pearland
+Cambusdoon New Ground, Ayr
+Affies Park
+Farmers Cricket Club Ground
+Grange Cricket Club, Raeburn Place
+Yeonhui Cricket Ground
+Old Hararians
+Tikkurila Cricket Ground
+Simar Cricket Ground, Rome
+Albert Park 1
+Meersen, Gent
+Canterbury Park
+Queen's Park Oval, Port of Spain
+Trent Bridge
+Brisbane Cricket Ground, Woolloongabba
+Sydney Cricket Ground
+Willowmoore Park
+Kingsmead, Durban
+Sinhalese Sports Club
+University Oval
+College Ground, Cheltenham
+Riverside Ground, Chester-le-Street
+Kibworth Cricket Club New Ground
+Basin Reserve
+Hagley Oval, Christchurch
+Sano International Cricket Ground
+Goodyear Park, Bloemfontein
+Punjab Cricket Association Stadium, Mohali
+Nevill Ground
+Mainpower Oval, Rangiora
+Stadium Australia
+Drummoyne Oval, Sydney
+Al Amerat Cricket Ground Oman Cricket (Ministry Turf 1)
+Maple Leaf North-East Ground, King City
+OUTsurance Oval
+Holkar Cricket Stadium
+JSCA International Stadium Complex
+M.Chinnaswamy Stadium
+M Chinnaswamy Stadium, Bengaluru
+Sheikh Zayed Stadium, Abu Dhabi
+Bayuemas Oval, Kuala Lumpur
+Brian Lara Stadium, Tarouba, Trinidad
+Daren Sammy National Cricket Stadium, Gros Islet, St Lucia
+Daren Sammy National Cricket Stadium, Gros Islet
+Central Broward Regional Park Stadium Turf Ground
+P Sara Oval
+Windsor Park, Roseau, Dominica
+The Wanderers Stadium
+Alur Cricket Stadium II
+Alur Cricket Stadium III
+Jadavpur University Campus
+ACA Stadium,Mangalagiri
+Bready Cricket Club, Magheramason
+Sportpark Het Schootsveld, Deventer
+Amini Park
+Maple Leaf South-West Ground
+MA Aziz Stadium, Chittagong
+Antigua Recreation Ground, St John's, Antigua
+Jaffery Sports Club Ground
+AMI Stadium
+VRA Ground
+Sedgars Park
+Castle Park Cricket Ground
+Willowmoore Park A Field
+Botswana Cricket Association Oval 1
+Pembroke Cricket Club, Sandymount, Dublin
+Church Street Park
+The Rose Bowl
+Harare Sports Club
+Pallekele International Cricket Stadium
+National Stadium
+Sheikh Zayed Stadium
+Eden Gardens
+Rangiri Dambulla International Stadium
+The Cooper Associates County Ground
+Kinrara Academy Oval
+County Ground, New Road, Worcester
+Brisbane Cricket Ground, Woolloongabba, Brisbane
+Grace Road
+Achimota Senior Secondary School B Field, Accra
+Gymkhana Club Ground, Nairobi
+Nelson Park, Napier
+Queen's Park, Invercargill
+Westpac Stadium
+Sydney Showground Stadium
+International Sports Stadium, Coffs Harbour
+Cricket Central, Sydney
+Maple Leaf North-West Ground, King City
+Farmers Cricket Club Ground, St Martin
+Grand Prairie Stadium
+Dr DY Patil Sports Academy
+Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium
+Shaheed Veer Narayan Singh International Stadium
+Zayed Cricket Stadium, Abu Dhabi
+Barsapara Cricket Stadium, Guwahati
+Chevrolet Park, Bloemfontein
+United Cricket Club Ground, Windhoek
+Lisicji Jarak Cricket Ground
+Grand Prairie Stadium, Dallas
+Rajiv Gandhi International Cricket Stadium, Dehradun
+Rajiv Gandhi International Cricket Stadium
+Sardar Patel (Gujarat) Stadium, Motera
+Indian Association Ground, Singapore
+Madhavrao Scindia Cricket Ground
+Reliance Stadium
+DRIEMS Ground
+Airforce Complex ground, Palam II
+IC-Gurunanak College Ground
+Gokaraju Liala Gangaaraju ACA Cricket Ground
+Alembic 2  Cricket Ground
+Chaudhry Bansi Lal Cricket Stadium
+Tony Ireland Stadium
+MA Aziz Stadium
+Sportpark Maarschalkerweerd, Utrecht
+Zahur Ahmed Chowdhury Stadium, Chittagong
+St Albans Club, Buenos Aires
+Westpac Park, Hamilton
+Punjab Cricket Association Stadium, Mohali, Chandigarh
+Sabina Park, Kingston, Jamaica
+Arnos Vale Ground
+Abu Dhabi Oval 2
+Sportpark Westvliet, The Hague
+Sky Stadium, Wellington
+Coolidge Cricket Ground, Antigua
+Diamond Oval
+Cobham Oval (New)
+The Rose Bowl (Nursery)
+Star Stile
+Willowmoore Park B Field
+Ovale di Rastignano
+Tafawa Balewa Square Cricket Oval
+Sportpark Thurlede
+National Stadium, Hamilton
+The Vineyard, Dublin
+Royal Chiangmai Golf Club
+Gymkhana Club
+Roma Cricket Ground
+Queen's Park Oval
+Mannofield Park
+Kennington Oval
+Sophia Gardens
+Saurashtra Cricket Association Stadium
+Newlands, Cape Town
+Gaddafi Stadium, Lahore
+Old Trafford, Manchester
+Kent County Cricket Ground, Beckenham
+County Ground, Derby
+Grace Road, Leicester
+Radlett Cricket Club, Radlett
+Roseworth Terrace, Gosforth
+Arbab Niaz Stadium
+Solvangs Park, Glostrup
+University Oval, Dunedin
+Eden Park, Auckland
+The Kent County Cricket Ground
+Radlett Cricket Club
+Mission Road Ground, Mong Kok, Hong Kong
+University of Otago Oval
+Manuka Oval, Canberra
+GMHBA Stadium, South Geelong, Victoria
+Narendra Modi Stadium
+MA Chidambaram Stadium, Chepauk, Chennai
+Nahar Singh Stadium, Faridabad
+Subrata Roy Sahara Stadium
+Eden Gardens, Kolkata
+Bayer Uerdingen Cricket Ground
+GB Oval, Szodliget
+Kensington Oval, Bridgetown, Barbados
+Sir Vivian Richards Stadium, North Sound, Antigua
+Galle International Stadium
+Warner Park, Basseterre, St Kitts
+Observatory Lane, Rathmines
+Mitchells and Butlers' Ground, Birmingham
+Holkar Cricket Stadium, Indore
+West End Park International Cricket Stadium, Doha
+VCA Ground
+Dr. Gokaraju Laila Ganga Raju ACA Cricket Complex -DVR Ground,Mulapadu
+Narendra Modi Stadium Ground 'A', Motera
+Udayana Cricket Ground
+Tony Ireland Stadium, Townsville
+Marrara Cricket Ground, Darwin
+Jade Stadium, Christchurch
+Queen's Park (New), St George's, Grenada
+ICC Global Cricket Academy
+Nahar Singh Stadium
+Keenan Stadium
+Boland Park
+University of Lagos Cricket Oval
+Shaheed Chandu Stadium
+Darren Sammy National Cricket Stadium, Gros Islet
+Andhra Cricket Association-Visakhapatnam District Cricket Association Stadium
+Kallang Ground
+Bert Sutcliffe Oval
+Zohur Ahmed Chowdhury Stadium
+Amini Park, Port Moresby
+Zhejiang University of Technology Cricket Field
+Lugogo Cricket Oval
+Severn Cricket Field, Woodley Park
+Instonians Cricket Club, Shaw's Bridge Lower Ground, Belfast
+Independence Park, Port Vila
+Skarpnack 1
+Queen Elizabeth II Oval
+ICC Academy Oval 1
+Civil Service Cricket Club, Stormont
+Titwood
+Kensington Oval, Bridgetown
+Dubai International Cricket Stadium
+Sharjah Cricket Association Stadium
+Edgbaston
+Shere Bangla National Stadium
+Melbourne Cricket Ground
+R Premadasa Stadium, Colombo
+Marsa Sports Club
+Lord's
+Headingley, Leeds
+Brisbane Cricket Ground
+Moara Vlasiei Cricket Ground
+La Manga Club Bottom Ground
+Bay Oval
+Willowmoore Park, Benoni
+Aigburth, Liverpool
+Kennards Hire Community Oval
+Nelson Park
+Carrara Oval
+Junction Oval, Melbourne
+Barabati Stadium, Cuttack
+Lal Bahadur Shastri Stadium, Hyderabad, Deccan
+Great Barrier Reef Arena, Mackay
+Diamond Oval, Kimberley
+Lugogo Cricket Oval, Kampala
+Buffalo Park
+Rajiv Gandhi International Stadium, Uppal, Hyderabad
+Sawai Mansingh Stadium, Jaipur
+Entebbe Cricket Oval
+Tafawa Balewa Square Cricket Oval, Lagos
+Happy Valley Ground
+Arnos Vale Ground, Kingstown, St Vincent
+Gymkhana Club Ground
+Castle Avenue, Dublin
+The Saffrons, Eastbourne
+Tolerance Oval, Abu Dhabi
+Malahide
+Greenfield Stadium
+Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium B
+Bundaberg Rum Stadium, Cairns
+Belgrano Athletic Club Ground, Buenos Aires
+Westpac Stadium, Wellington
+Daren Sammy National Cricket Stadium
+The John Fretwell Sporting Complex, Nettleworth
+Abu Dhabi Oval 1
+Sheikh Zayed Stadium Nursery 2
+Vidarbha Cricket Association Ground
+Sabina Park, Jamaica
+Indian Petrochemicals Corporation Limited Sports Complex Ground
+Bayuemas Oval
+Los Reyes Polo Club
+Lords, St David's Cricket Club Ground
+Terdthai Cricket Ground, Bangkok
+Sportpark Het Schootsveld 2
+Observatory Lane, Rathmines, Dublin
+Albert Park 2
+Queens Sports Club
+Khan Shaheb Osman Ali Stadium
+Sharjah Cricket Stadium
+ICC Academy
+Headingley
+Riverside Ground
+Sedbergh School
+County Ground, Chelmsford
+County Ground, Northampton
+The Gnoll, Neath
+Docklands Stadium
+Zahur Ahmed Chowdhury Stadium
+Vidarbha Cricket Association Stadium, Jamtha
+M Chinnaswamy Stadium
+Feroz Shah Kotla
+Rawalpindi Cricket Stadium
+Kerava National Cricket Ground
+Saxton Oval
+Basin Reserve, Wellington
+Uxbridge Cricket Club Ground
+Moara Vlasiei Cricket Ground, Ilfov County
+New Wanderers Stadium, Johannesburg
+North West Cricket Stadium, Potchefstroom
+Boland Bank Park, Paarl
+Bert Sutcliffe Oval, Lincoln
+Geelong Cricket Ground
+International Sports Stadium
+Docklands Stadium, Melbourne
+Lavington Sports Oval, Albury
+Allan Border Field, Brisbane
+North Dalton Park, Wollongong
+Senwes Park, Potchefstroom
+Al Amerat Cricket Ground Oman Cricket (Ministry Turf 2)
+Kingsmead
+The Village, Malahide, Dublin
+Punjab Cricket Association IS Bindra Stadium
+MA Chidambaram Stadium
+Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow
+Mahinda Rajapaksa International Cricket Stadium, Sooriyawewa, Hambantota
+Penrhyn Avenue, Rhos-on-Sea, Colwyn Bay
+Castle Park Cricket Ground, Colchester
+Sportpark Westvliet
+Campbell Park, Milton Keynes
+Zayed Cricket Stadium
+Vidarbha Cricket Association Stadium, Jamtha, Nagpur
+Greenfield International Stadium, Thiruvananthapuram
+Santarem Cricket Ground
+University of Doha for Science and Technology
+St  Pauls college ground  Kalamassery
+Alembic 1 Cricket Ground
+Motibaug Cricket Ground
+Dr. Y.S. Rajasekhara Reddy ACA VDCA Cricket Stadium
+C B Patel Ground
+ Emerald Heights International School Ground
+T I Murugappa Ground
+Jadavpur University Campus 2nd Ground, Kolkata
+Sir Vivian Richards Stadium
+Sinovich Park, Sinoville
+Asgiriya Stadium
+Davies Park, Queenstown
+Sher-e-Bangla National Cricket Stadium
+National Cricket Stadium, Grenada
+Spytty Park, Newport
+Takashinga Sports Club, Highfield, Harare
+Mombasa Sports Club Ground
+Sector 16 Stadium
+Narayanganj Osmani Stadium
+St Georges Quilmes
+Royal Selangor Club
+Prairie View Cricket Complex
+Kyambogo Cricket Oval
+Wright Cricket Field, Woodley Park
+The Green, Comber
+Merrion Cricket Club Ground, Dublin
+New Strabane Park
+The Hills, Milverton
+Prem Tinsulanonda International School
+Integrated Polytechnic Regional Centre
+Hurlingham Club Ground, Buenos Aires
+Queen's Park Oval, Trinidad
+Strathfieldsaye
+Warner Park, Basseterre
+Wanderers Cricket Ground
+Western Australia Cricket Association Ground
+Moses Mabhida Stadium
+McLean Park
+SuperSport Park, Centurion
+Gaddafi Stadium
+Multan Cricket Stadium
+Kennington Oval, London
+County Ground
+County Ground, Hove
+County Ground, Bristol
+R.Premadasa Stadium, Khettarama
+Svanholm Park, Brondby
+Molyneux Park
+Pukekura Park, New Plymouth
+John Davies Oval, Queenstown
+Saxton Oval, Nelson
+Gahanga International Cricket Stadium, Rwanda
+St George's Park, Port Elizabeth
+Arundel Castle Cricket Club Ground
+Perth Stadium
+Ted Summerton Reserve
+Aurora Stadium, Launceston
+Cazaly's Stadium, Cairns
+Wankhede Stadium, Mumbai
+Oakham School Ground
+Traeger Park, Alice Springs
+Karen Rolton Oval, Adelaide
+Bankstown Oval, Sydney
+Desert Springs Cricket Ground, Almeria
+Newlands
+Mahinda Rajapaksa International Cricket Stadium, Sooriyawewa
+Malahide, Dublin
+Nehru Stadium
+Maharashtra Cricket Association Stadium, Pune
+Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam
+Providence Stadium, Guyana
+Nevill Ground, Tunbridge Wells
+St Helen's, Swansea
+JSCA International Stadium Complex, Ranchi
+National Stadium, Karachi
+York Cricket Club
+Iqbal Stadium
+Cricket Stadium, Sector-16
+Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium
+Abhimanyu Cricket Academy, Dehradun
+VRA Ground, Amstelveen
+Grange Cricket Club Ground, Raeburn Place
+Green Park, Kanpur
+Greenfield International Stadium
+National Cricket Stadium
+Kensington Oval, Barbados
+Sir Vivian Richards Stadium, Antigua
+Darren Sammy National Cricket Stadium, St Lucia
+P Saravanamuttu Stadium
+Mangaung Oval
+ICC Academy Ground No 2
+Hazelaarweg
+John Davies Oval
+The Padang
+Singapore Cricket Club
+Marrara Cricket Ground
+Mannofield Park, Aberdeen
+Tolerance Oval
+Chittagong Divisional Stadium
+Simonds Stadium, South Geelong
+FB Fields
+Centro Sportivo Dozza
+Goodyear Park
+Somerset Cricket Club
+Bermuda National Stadium
+Botswana Cricket Association Oval 2
+The Lawn, Waringstown
+Royal Brussels Cricket Club Ground, Waterloo
+Dower Park
+White Hills Oval
+M Chinnaswamy Stadium, Bangalore
+Clontarf Cricket Club Ground
+Sabina Park, Kingston
+Rajiv Gandhi International Stadium, Uppal
+Boland Park, Paarl
+R.Premadasa Stadium
+Dreux Sport Cricket Club
+Edgbaston, Birmingham
+Lord's, London
+The Rose Bowl, Southampton
+New Close County Cricket Ground, Newport, Isle-of-Wight
+Bellerive Oval, Hobart
+Bellerive Oval
+Maple Leaf North-West Ground
+National Sports Academy, Sofia
+Eden Park Outer Oval
+Merchant Taylors' School Ground, Northwood
+City Oval, Pietermaritzburg
+Providence Stadium
+Queenstown Events Centre
+Cello Basin Reserve
+University of Tasmania Stadium, Launceston
+Bready
+Al Dhaid Cricket Village
+Park 25 No 2, Adelaide
+Kyambogo Cricket Ground, Kampala
+Gahanga International Cricket Stadium. Rwanda
+St George's Park
+SuperSport Park
+Maharashtra Cricket Association Stadium
+Sardar Patel Stadium, Motera
+Arun Jaitley Stadium, Delhi
+Brabourne Stadium, Mumbai
+Dr DY Patil Sports Academy, Mumbai
+UKM-YSD Cricket Oval, Bangi
+County Ground, Taunton
+Cricket Field Road Ground, Horsham
+United Cricket Club Ground
+Welbeck Abbey Cricket Ground
+Terdthai Cricket Ground
+Barsapara Cricket Stadium
+Reliance Cricket Stadium
+St'Xavier's KCA Cricket Ground
+Alur Cricket Stadium
+SSN College Ground
+Gurugram Cricket Ground (SRNCC)
+Riverway Stadium, Townsville
+Sportpark Maarschalkerweerd
+Myreside
+Grange Cricket Club Ground, Raeburn Place, Edinburgh
+Hazelaarweg, Rotterdam
+Arnos Vale Ground, Kingstown
+Bangabandhu National Stadium, Dhaka
+Warner Park, St Kitts
+Colwyn Bay Cricket Club Ground
+Captain Roop Singh Stadium
+Kensington Oval
+Senwes Park
+Sportpark Het Schootsveld
+Niaz Stadium, Hyderabad
+Carisbrook
+Titwood, Glasgow
+UKM Cricket Oval
+Faleata Oval No 3
+Wong Cricket Field, Woodley Park
+Sulabiya Ground
+King George V Sports Ground
+Goldenacre, Edinburgh
+Sportpark Duivesteijn
+Skarpnack 2
+Sea Breeze Oval
