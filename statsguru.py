@@ -40,7 +40,7 @@ chain = prompt | llm
 
 
 vector_store_files=''
-for filename in os.listdir(r'.\vector_store_files'):
+for filename in os.listdir('./vector_store_files'):
     with open(os.path.join(r'.\vector_store_files', filename), 'r') as file:
         filename=filename.replace('.txt','')
         vector_store_files+=(filename+"column: ")
