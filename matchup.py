@@ -11,7 +11,7 @@ def matchup():
         with col2:
             bowler_name = st.multiselect('Bowler Name', load_dropdown_values('bowler'))
         with col3:
-            group_by = st.selectbox('Group By', ['TournamentName', 'Venue', 'Batsman', 'Bowler'])
+            group_by = st.selectbox('Group By', ['tournament_name', 'venue', 'batter', 'bowler'])
         adv = st.checkbox('Advanced Options')
 
         # Set default values for advanced options
