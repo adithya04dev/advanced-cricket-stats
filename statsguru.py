@@ -19,7 +19,9 @@ from datetime import datetime
 import langgraph
 from langgraph.graph import Graph
 from langgraph.graph import END
+import streamlit as st 
 
+genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
 llm=ChatTogether(model="meta-llama/Llama-3-70b-chat-hf")
 prompt = ChatPromptTemplate.from_messages(
@@ -208,9 +210,8 @@ workflow.add_edge('query_to_dataframe', 'coding')
 workflow.set_entry_point("find_references")
 
 app = workflow.compile()
-import streamlit as st 
 def ask(question):
-  global app
+    global app
     response=app.invoke(question)
     remarks=response[0]
     df=response[1]
