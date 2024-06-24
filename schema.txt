@@ -44,4 +44,5 @@
 43. cur_bowler_runs FLOAT
 44. curr_bowler_balls_bowled FLOAT
 45. curr_bowler_wickets FLOAT
+46.venue String
 
