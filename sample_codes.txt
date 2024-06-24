@@ -5,7 +5,7 @@ WITH
   -- Filtered balls data
   filtered_balls AS (
     SELECT *
-    FROM bbbdata.ballsnew
+    FROM bbbdata.ballsnew_2406
     WHERE {insert condition here}
   ),
   
@@ -84,7 +84,7 @@ WITH
   -- Filtered balls data
   filtered_balls AS (
     SELECT *
-    FROM bbbdata.ballsnew
+    FROM bbbdata.ballsnew_2406
     WHERE insert condition here 
   ),
   
