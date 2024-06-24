@@ -26,3 +26,6 @@ elif option == 'Player Search':
     player_search()
 elif option == 'Venue Search':
     venue_search()
+question=st.text_input("Enter Your Query")
+if question:
+    ask(question)
