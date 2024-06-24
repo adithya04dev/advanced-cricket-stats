@@ -1,6 +1,0 @@
-T20
-ODM
-MDM
-ODI
-Test
-IT20
