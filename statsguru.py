@@ -135,7 +135,7 @@ with open("sample_codes.txt","r") as f:
   sample_codes=f.read()
 
 task=""" 
-I have a ball by ball bigquery database named bbbdata.ballsnew of cricket matches..
+I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket matches..
 Schema of Database:
 {schema}
 Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
