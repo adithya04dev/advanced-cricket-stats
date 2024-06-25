@@ -219,9 +219,9 @@ workflow.add_edge('query_to_dataframe', 'coding')
 
 workflow.set_entry_point("find_references")
 
-app = workflow.compile()
+
 def ask(question):
-    global app
+    app = workflow.compile()
     response=app.invoke(question)
     remarks=response[0]
     df=response[1]
