@@ -3,7 +3,6 @@ import pandas
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain.memory import ChatMessageHistory
 from langchain_together import ChatTogether
 import pandas as pd
 from google.cloud import bigquery
@@ -25,6 +24,7 @@ import base64
 import json
 import google.auth
 from google.oauth2 import service_account
+from langchain_community.chat_message_histories import ChatMessageHistory
 
 credentials_b64 = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 credentials_bytes = base64.b64decode(credentials_b64)
