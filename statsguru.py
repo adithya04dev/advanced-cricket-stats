@@ -180,7 +180,7 @@ def router(inp):
     global n
     if type(inp[1])==pandas.core.frame.DataFrame or n>4:
         return "exit"
-    el:
+    else:
         return "run"
 def query_to_dataframe(queryl):
     project_id = 'adept-cosine-420005'
