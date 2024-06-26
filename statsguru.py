@@ -177,9 +177,10 @@ def coding(json_data):
     sql_query=sql_query.replace('sql',' ')
     return [sql_query,f]
 def router(inp):
-    if type(inp[1])==pandas.core.frame.DataFrame:
+    global n
+    if type(inp[1])==pandas.core.frame.DataFrame or n>4:
         return "exit"
-    else:
+    el:
         return "run"
 def query_to_dataframe(queryl):
     project_id = 'adept-cosine-420005'
