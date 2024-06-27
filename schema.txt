@@ -20,8 +20,6 @@
 19. penalty INTEGER
 20. current_match_inning_number INTEGER
 21. overs INTEGER
-22. Batsman_id STRING
-23. Bowler_id STRING
 24. batter_runs INTEGER
 25. extras_runs INTEGER
 26. score INTEGER
