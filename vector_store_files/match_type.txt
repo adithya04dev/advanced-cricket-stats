@@ -1,6 +1,6 @@
 ODI
 MDM
 Test
-IT20 (this format include all t20 between international teams) 
-T20 (this format include all t20 between domestic teams not international teams) 
+IT20 (refers to international t20 matches) 
+T20 (refers to domestic t20 matches) 
 ODM
