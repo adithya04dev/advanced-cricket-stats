@@ -1,0 +1,319 @@
+This column contains the unique values present in the columns  team_bat,team_bowl in the database
+United Arab Emirates
+Sussex
+South Korea
+Northern Districts
+Perth Scorchers
+Kuwait
+ICC World XI
+New South Wales
+Los Angeles Knight Riders
+Germany
+Mumbai Indians
+Royal Challengers Bangalore
+Kolkata Knight Riders
+Lucknow Super Giants
+Tshwane Spartans
+Paarl Rocks
+Antigua Hawksbills
+St Kitts and Nevis Patriots
+Madhya Pradesh
+Assam
+Rangpur Riders
+Sylhet Sunrisers
+Sylhet Strikers
+Nangarhar Leopards
+Gambia
+Lesotho
+Cameroon
+Pakistan
+Scotland
+South Africa
+New Zealand
+Joburg Super Kings
+Wellington
+Glamorgan
+Hungary
+Norway
+Bermuda
+Brisbane Heat
+Melbourne Renegades
+South Australia
+Italy
+United States of America
+Kings XI Punjab
+Sunrisers Hyderabad
+St Lucia Stars
+Baroda
+Delhi
+Gujarat
+Bengal
+Tamil Nadu
+Andhra
+Puducherry
+Meghalaya
+Abu Dhabi Knight Riders
+Dhaka Platoon
+Cumilla Warriors
+Philippines
+Leinster Lightning
+Munster Reds
+Bahamas
+MI Cape Town
+Paarl Royals
+Hong Kong
+Luxembourg
+Durham
+Worcestershire
+Switzerland
+Rwanda
+China
+Melbourne Stars
+Victoria
+Saudi Arabia
+Gujarat Lions
+Karachi Kings
+Cape Town Blitz
+Nelson Mandela Bay Giants
+Colombo Stars
+Mumbai
+Uttar Pradesh
+Karnataka
+Maharashtra
+Sikkim
+Himachal Pradesh
+MI Emirates
+Gulf Giants
+Dhaka Dynamites
+Sylhet Thunder
+Northern Superchargers
+Fiji
+Mali
+Australia
+Durban's Super Giants
+Nepal
+Middlesex
+Surrey
+Romania
+Central Districts
+Otago Volts
+Hobart Hurricanes
+Singapore
+Malaysia
+Queensland
+Boland
+Galle Titans
+Colombo Strikers
+Seattle Orcas
+Chennai Super Kings
+Rising Pune Supergiants
+Islamabad United
+Kandy Tuskers
+Kandy Warriors
+Vidarbha
+Mizoram
+Duronto Rajshahi
+Sylhet Super Stars
+Dhaka Dominators
+Welsh Fire
+Malawi
+Northern Knights
+England
+India
+Hampshire
+Derbyshire
+Lancashire
+Asia XI
+Spain
+Serbia
+Nigeria
+Austria
+Cape Cobras
+Knights
+North West
+KwaZulu-Natal Inland
+San Francisco Unicorns
+Rajasthan Royals
+Deccan Chargers
+Pune Warriors
+Peshawar Zalmi
+Quetta Gladiators
+Botswana
+Cyprus
+Trinbago Knight Riders
+St Lucia Kings
+Jharkhand
+Tripura
+Railways
+Services
+Arunachal Pradesh
+Manipur
+Nagaland
+Comilla Victorians
+Chattogram Challengers
+Kandahar Knights
+Suriname
+Panama
+Zambia
+Seychelles
+West Indies
+Afghanistan
+Sunrisers Eastern Cape
+France
+Somerset
+Africa XI
+Denmark
+Finland
+Auckland
+Central Stags
+Adelaide Strikers
+Tasmania
+Ghana
+B-Love Kandy
+Cambodia
+Kochi Tuskers Kerala
+Punjab Kings
+Multan Sultans
+St Lucia Zouks
+Jamaica Tallawahs
+Isle of Man
+Kerala
+Hyderabad (India)
+Himachal
+Sharjah Warriors
+Barisal Burners
+Khulna Royal Bengals
+Sylhet Royals
+Chittagong Vikings
+Barisal Bulls
+Khulna Titans
+Sylhet Sixers
+Fortune Barishal
+London Spirit
+Mozambique
+Bhutan
+Turkey
+Israel
+Slovenia
+Eswatini
+Ireland
+Sri Lanka
+Zimbabwe
+Netherlands
+Malta
+Otago
+Kent
+Leicestershire
+Essex
+Nottinghamshire
+Northamptonshire
+Warwickshire
+Czech Republic
+Bulgaria
+Birmingham Bears
+Uganda
+Sydney Thunder
+Maldives
+Titans
+Warriors
+Jersey
+Texas Super Kings
+Delhi Capitals
+Gujarat Titans
+Lahore Qalandars
+Sierra Leone
+Jozi Stars
+Durban Heat
+Croatia
+Haryana
+Chhattisgarh
+Uttarakhand
+Bihar
+Chittagong Kings
+Rajshahi Kings
+Balkh Legends
+Trent Rockets
+Costa Rica
+Cayman Islands
+Kenya
+Pretoria Capitals
+Yorkshire
+Sydney Sixers
+Lions
+Rising Pune Supergiant
+Dambulla Viiking
+Guernsey
+Indonesia
+Saurashtra
+Punjab
+Goa
+Dhaka Gladiators
+Minister Group Dhaka
+Durdanto Dhaka
+Samoa
+St Helena
+Chile
+Oman
+Belgium
+Gloucestershire
+Greece
+Tanzania
+Canada
+Auckland Aces
+Western Australia
+Western Province
+Jaffna Kings
+MI New York
+Washington Freedom
+Mongolia
+Papua New Guinea
+Kandy Falcons
+Trinidad & Tobago Red Steel
+Iran
+Jammu & Kashmir
+Rajasthan
+Odisha
+Chandigarh
+Dubai Capitals
+Rajshahi Royals
+Argentina
+Oval Invincibles
+Manchester Originals
+Mexico
+Belize
+Cook Islands
+Bangladesh
+Gibraltar
+Portugal
+Sweden
+Canterbury
+Namibia
+Japan
+Wellington Firebirds
+Bahrain
+Dolphins
+Qatar
+Vanuatu
+Dambulla Aura
+Delhi Daredevils
+Royal Challengers Bengaluru
+Estonia
+Impi
+Colombo Kings
+Jaffna Stallions
+Galle Gladiators
+Dambulla Giants
+Barbados Tridents
+Guyana Amazon Warriors
+Barbados Royals
+Thailand
+Desert Vipers
+Rangpur Rangers
+Khulna Tigers
+Kabul Zwanan
+Paktia Panthers
+Southern Brave
+Birmingham Phoenix
+Myanmar
+Swaziland
+North-West Warriors
