@@ -93,7 +93,7 @@ Imagine yourself as a sql assitant who writes sql code for calculating stats bas
 I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket matches..
 Schema of Database: {schema}
 User Query :  {user_query}
-More info about correct refernces from userquery present in Datbase: {res_gem}
+More info about correct refernces from userquery present in Database for where clause in sql: {res_gem}
 
 THINK step by step..
 use COMMON TABLE EXPRESSIONS IF NEEDED.
