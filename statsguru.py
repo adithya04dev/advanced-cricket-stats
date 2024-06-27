@@ -33,7 +33,7 @@ credentials = service_account.Credentials.from_service_account_info(credentials_
 
 genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
-llm=ChatTogether(model="meta-llama/Llama-3-70b-chat-hf")
+llm=ChatTogether(model="Qwen/Qwen2-72B-Instruct")
 prompt = ChatPromptTemplate.from_messages(
     [
         (
