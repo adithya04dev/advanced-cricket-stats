@@ -53,7 +53,7 @@ vector_store_files=''
 for filename in os.listdir('./vector_store_files'):
     with open(os.path.join('./vector_store_files', filename), 'r') as file:
         filename=filename.replace('.txt','')
-        vector_store_files+=(filename+"column: ")
+        vector_store_files+=(filename)
         vector_store_files+='\n'
         vector_store_files+=file.read()
         vector_store_files+='\n'
