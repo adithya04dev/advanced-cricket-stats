@@ -2,5 +2,5 @@ ODI
 MDM
 Test
 IT20 (refers to international t20 matches) 
-T20 (refers to domestic t20 matches) 
+T20 (refers to domestic t20 matches..) specifically use t20 or IT20 ONLY when specified in uer query.
 ODM
