@@ -123,7 +123,7 @@ def find_references(user_query):
     try:
         response = model.generate_content([f_user_query])
     except Exception as e:
-        cache = caching.CachedContent.create(model="models/gemini-1.5-flash-001",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
+        cache = caching.CachedContent.create(model="models/gemini-1.5-flash",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
         model = genai.GenerativeModel.from_cached_content(cached_content=cache) 
         response = model.generate_content([f_user_query])
 
