@@ -157,7 +157,7 @@ User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}. 
 
 Suggestions:
-1.t20 in match_type refers to domestic t20 matches whereas IT20 refers to international matches
+1.t20, IT20  in match_type are mixed off there isnt any concrete difference between them,thus dont use them too filter the dataset much and ignore.
 
  """
 
