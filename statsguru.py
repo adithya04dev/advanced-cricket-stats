@@ -172,7 +172,7 @@ def coding(json_data):
     n+=1
     if n>4:
         remarks="Cannot be processed further. Simplify the Quey and try again."
-    if type(f)==pandas.core.frame.DataFrame or n>4:
+    if type(f)==pandas.core.frame.DataFrame:
        return [remarks,f]
     if f==None:
       f_user_query=task.format(user_query=user_query,res_gem=res_gem,schema=schema,sample_codes=sample_codes)
