@@ -114,7 +114,7 @@ chat_gemini = model.start_chat(history=[])
 response = chat_gemini.send_message(f_prompt1)
 def find_references(user_query):
     global history,chat
-    global n,chat_gemini
+    global n,chat_gemini,model
     n=0
     history=ChatMessageHistory()
     chat = RunnableWithMessageHistory(
@@ -131,6 +131,9 @@ def find_references(user_query):
     f_user_query=query.format(user_query=user_query)
     try:
         response = chat_gemini.send_message(f_user_query)
+        
+        print(f"Total Tokens = {model.count_tokens(chat_gemini.history}")
+
     except Exception as e:
         # cache = caching.CachedContent.create(model="models/gemini-1.5-pro-001",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
         # model = genai.GenerativeModel.from_cached_content(cached_content=cache) 
