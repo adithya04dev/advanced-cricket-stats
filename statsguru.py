@@ -108,7 +108,7 @@ chat =None
 n=0
 def find_references(user_query):
     global history,chat
-    global n,cache,model
+    global n
     n=0
     history=ChatMessageHistory()
     chat = RunnableWithMessageHistory(
