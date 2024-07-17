@@ -61,7 +61,9 @@ with open("./schema.txt", "r") as file:
     schema=file.read()
 prompt1="""
 
-Columns and its values in database: {vector_store_files}
+Columns and its values in database: {vector_store_files}.
+Just try to store it as your context, i will be giving u some task based on this.
+
 """
 query="""
 
@@ -106,9 +108,13 @@ chat =None
 # cache = caching.CachedContent.create(model="models/gemini-1.5-flash-001",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
 # model = genai.GenerativeModel.from_cached_content(cached_content=cache) 
 n=0
+model = genai.GenerativeModel('gemini-1.5-flash') 
+chat_gemini = model.start_chat(history=[])
+
+response = chat_gemini.send_message(f_prompt1)
 def find_references(user_query):
     global history,chat
-    global n
+    global n,chat_gemini
     n=0
     history=ChatMessageHistory()
     chat = RunnableWithMessageHistory(
@@ -118,10 +124,7 @@ def find_references(user_query):
         history_messages_key="chat_history",
     )
     
-    model = genai.GenerativeModel('gemini-1.5-flash') 
-    chat_gemini = model.start_chat(history=[])
 
-    response = chat_gemini.send_message(f_prompt1)
 
     res_gem=user_query
     res_gem+='\n'
