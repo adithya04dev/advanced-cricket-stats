@@ -103,11 +103,12 @@ f_prompt1=prompt1.format(vector_store_files=vector_store_files,schema=schema)
 history =None
 
 chat =None 
-
+cache = caching.CachedContent.create(model="models/gemini-1.5-fla",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
+model = genai.GenerativeModel.from_cached_content(cached_content=cache) 
 n=0
 def find_references(user_query):
     global history,chat
-    global n
+    global n,cache,model
     n=0
     history=ChatMessageHistory()
     chat = RunnableWithMessageHistory(
@@ -123,8 +124,7 @@ def find_references(user_query):
     try:
         response = model.generate_content([f_user_query])
     except Exception as e:
-        cache = caching.CachedContent.create(model="models/gemini-1.5-fla",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
-        model = genai.GenerativeModel.from_cached_content(cached_content=cache) 
+
         response = model.generate_content([f_user_query])
 
     res_gem+=response.text
