@@ -132,7 +132,7 @@ def find_references(user_query):
     try:
         response = chat_gemini.send_message(f_user_query)
         
-        print(f"Total Tokens = {model.count_tokens(chat_gemini.history}")
+        print(f"Total Tokens = {model.count_tokens(chat_gemini.history)}")
 
     except Exception as e:
         # cache = caching.CachedContent.create(model="models/gemini-1.5-pro-001",display_name="database", system_instruction="You are a helpful assistant.",contents=[f_prompt1],ttl=timedelta(minutes=10),)
