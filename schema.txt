@@ -1,4 +1,4 @@
-
+Below are some basic metrics on each ball.
 1. series_name STRING
 2. tournament_name STRING
 3. season STRING
@@ -34,6 +34,9 @@
 35. bowler_type STRING
 36. bowler STRING
 37. bowler_kind STRING
+Below are aggregated metrics till that particular ball.
+Use below columns for calculating any queries related to consecutive or any query in specific situaion
+
 38. curr_inngs_score INTEGER
 39. curr_inngs_balls INTEGER
 40. curr_inngs_wkts INTEGER
