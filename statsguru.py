@@ -166,7 +166,19 @@ Think step by step and return sql query that can be executed.
  """
 
 
+llm2 = ChatOpenAI(model='gpt-4o-mini')
+critique = """
+User Query: {user_query}
 
+Generated SQL Query: {sql_query}
+
+Database Schema: {schema}
+
+Please critique the generated SQL query for any errors or inefficiencies. 
+
+Think Step by Step.
+Finally Provide a corrected and Modified  SQL query:.
+"""
 def coding(json_data):
     res_gem=json_data['response']
     user_query=json_data['query']
@@ -180,19 +192,16 @@ def coding(json_data):
        return [remarks,f]
     if f==None:
       f_user_query=task.format(user_query=user_query,res_gem=res_gem,schema=schema,sample_codes=sample_codes)
-      res=chat.invoke(
-      {"input": f_user_query},
-      {"configurable": {"session_id": "unused"}},
-      )
+      res=chat.invoke({"input": f_user_query},{"configurable": {"session_id": "unused"}},)
+      
       
     else:
        if type(f)!=pandas.core.frame.DataFrame:
-          res=chat.invoke(
-          {"input": f"this error occurred{f}. Please try again and only provide rectified sql query"},
-          {"configurable": {"session_id": "unused"}},
-          )
+          res=chat.invoke({"input": f"this error occurred{f}. Please try again and only provide rectified sql query"},{"configurable": {"session_id": "unused"}},)
+    critique=critique.format(user_query=user_query,sql_query=res.content,schema=schema)
+    res=llm2.invoke(critique)
     result=res.content  
-    sql_query = result.split('```', 2)[1].strip()
+    sql_query = result.split('```')[-2].strip()
     sql_query=sql_query.replace('sql',' ')
     return [sql_query,f]
 def router(inp):
