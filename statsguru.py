@@ -155,7 +155,6 @@ I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket m
 Schema of Database:
 {schema}
 Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
-{sample_codes}
 Write SQL QUERY for :
 User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}. 
