@@ -184,7 +184,7 @@ def coding(json_data):
     user_query=json_data['query']
     f=json_data['f']
     remarks=user_query
-    global n
+    global n,critique
     n+=1
     if n>4:
         remarks="Cannot be processed further. Simplify the Quey and try again."
