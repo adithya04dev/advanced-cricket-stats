@@ -1,4 +1,4 @@
-The batter,bowler column in database consists of names from these values
+This column contains the unique values present in the columns  batter,bowler in the database
 
 
 Kevin Pietersen
