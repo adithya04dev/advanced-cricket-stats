@@ -160,7 +160,8 @@ User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}. 
 
 Suggestions:
-1.Use \ as delimeter before ' is present in sql query
+1.Some of sample queries using this database are :{sample_codes}
+2.Use \ as delimeter before ' is present in sql query
  """
 
 
