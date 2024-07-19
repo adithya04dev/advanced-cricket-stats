@@ -133,6 +133,7 @@ def find_references(user_query):
     res_gem=user_query
     res_gem+='\n'
     f_user_query=query.format(user_query=user_query)
+    ti=time.time()
     try:
         response = chat_gemini.send_message(f_user_query)
         
@@ -144,7 +145,9 @@ def find_references(user_query):
         pass
 
     res_gem+=response.text
-    print(res_gem)
+    print("Response: ",res_gem)
+    print("Time Taken for gemini-flash = ",time.time()-ti)
+    
     res_gem+='\n\n'
     return {'response':res_gem,'query':user_query,'f':None}
 with open("sample_codes.txt","r") as f:
@@ -185,7 +188,7 @@ def coding(json_data):
     remarks=user_query
     global n,critique
     llm2 = ChatOpenAI(model='gpt-4o-mini')
-
+    ti=time.time()
     n+=1
     if n>4:
         remarks="Cannot be processed further. Simplify the Quey and try again."
@@ -200,7 +203,8 @@ def coding(json_data):
        if type(f)!=pandas.core.frame.DataFrame:
           res=chat.invoke({"input": f"this error occurred{f}. Please try again and only provide rectified sql query"},{"configurable": {"session_id": "unused"}},)
     critique=critique.format(user_query=user_query,sql_query=res.content,schema=schema)
-    res=llm2.invoke(critique)
+    # res=llm2.invoke(critique)
+    print(f"time taken for sql query generation {time.time()-ti}") 
     result=res.content  
     sql_query = result.split('```')[-2].strip()
     sql_query=sql_query.replace('sql',' ')
