@@ -166,7 +166,6 @@ Think step by step and return sql query that can be executed.
  """
 
 
-llm2 = ChatOpenAI(model='gpt-4o-mini')
 critique = """
 User Query: {user_query}
 
@@ -185,6 +184,8 @@ def coding(json_data):
     f=json_data['f']
     remarks=user_query
     global n,critique
+    llm2 = ChatOpenAI(model='gpt-4o-mini')
+
     n+=1
     if n>4:
         remarks="Cannot be processed further. Simplify the Quey and try again."
