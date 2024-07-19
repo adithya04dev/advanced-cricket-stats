@@ -157,7 +157,7 @@ Schema of Database:
 Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
 Write SQL QUERY for :
 User Query :  {user_query}
-More info about correct refernces from userquery present in Datbase: {res_gem}. 
+More info about correct refernces from userquery present in Datbase: {res_gem}. use only this to filter dataset i.e in where of sql..
 
 Suggestions:
 1.Some of sample queries using this database are :{sample_codes}
