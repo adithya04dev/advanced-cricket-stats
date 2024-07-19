@@ -161,8 +161,7 @@ User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}. 
 
 Suggestions:
-1.T20, IT20  in match_type are mixed off there isnt any concrete difference between them
-2.Use \ as delimeter before ' is present in sql query
+1.Use \ as delimeter before ' is present in sql query
  """
 
 
