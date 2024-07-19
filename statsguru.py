@@ -150,18 +150,19 @@ def find_references(user_query):
 with open("sample_codes.txt","r") as f:
   sample_codes=f.read()
 
-task=""" 
+task=""" Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
 I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket matches..
 Schema of Database:
 {schema}
-Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
+Some of sample queries using this database are :{sample_codes}
 Write SQL QUERY for :
 User Query :  {user_query}
 More info about correct refernces from userquery present in Datbase: {res_gem}. use only this to filter dataset i.e in where of sql..
 
 Suggestions:
-1.Some of sample queries using this database are :{sample_codes}
-2.Use \ as delimeter before ' is present in sql query
+1.Use \ as delimeter before ' is present in sql query.
+
+Think step by step and return sql query that can be executed.
  """
 
 
