@@ -25,6 +25,7 @@ import json
 import google.auth
 from google.oauth2 import service_account
 from langchain_community.chat_message_histories import ChatMessageHistory
+from langchain_openai import ChatOpenAI
 
 credentials_b64 = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 credentials_bytes = base64.b64decode(credentials_b64)
@@ -33,7 +34,10 @@ credentials = service_account.Credentials.from_service_account_info(credentials_
 
 genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
 
-llm=ChatTogether(model="meta-llama/Llama-3-70b-chat-hf")
+# llm=ChatTogether(model="meta-llama/Llama-3-70b-chat-hf")
+llm=ChatOpenAI(model='gpt-4o-mini')
+
+
 prompt = ChatPromptTemplate.from_messages(
     [
         (
