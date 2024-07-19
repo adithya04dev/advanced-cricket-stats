@@ -152,7 +152,7 @@ with open("sample_codes.txt","r") as f:
 
 task=""" Imagine yourself as sql assitant who writes sql code for calculating stats based on user query in a cricket database.
 I have a ball by ball bigquery database named bbbdata.ballsnew_2406 of cricket matches..
-Schema of Database:
+Schema and info about columns of  Database:
 {schema}
 Some of sample queries using this database are :{sample_codes}
 Write SQL QUERY for :
@@ -172,7 +172,7 @@ User Query: {user_query}
 
 Generated SQL Query: {sql_query}
 
-Database Schema: {schema}
+Schema and info about columns of  Database:
 
 Please critique the generated SQL query for any errors or inefficiencies. 
 
