@@ -3,6 +3,8 @@ import pandas as pd
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import calculate_stats
 import time
+import matplotlib.pyplot as plt
+
 def player_comp():
     def get_user_inputs():
         col1, col2, col3 = st.columns(3)
