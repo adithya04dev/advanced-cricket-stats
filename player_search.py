@@ -12,7 +12,7 @@ def player_search():
         with col3:
             match_type = st.selectbox('Match Type', load_dropdown_values('match_type'))
         with col1:
-            group_by = st.selectbox('Group By', ['Season','Venue', 'LeagueName', 'BattingType', 'BowlingType'])
+            group_by = st.selectbox('Group By', ['venue', 'series_name', 'batter', 'bowler_type'])
         adv = st.checkbox('Advanced Options')
 
         # Set default values for advanced options
