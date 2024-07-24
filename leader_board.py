@@ -132,7 +132,7 @@ def leader_board():
 
 
         fig, ax = plt.subplots()
-        scatter = ax.scatter(df[stats.columns[6]], df[stats.columns[7]])
+        scatter = ax.scatter(df[df.columns[6]], df[df.columns[7]])
         
         # Annotate each point with the batsman name
         for i, row in df.iterrows():
