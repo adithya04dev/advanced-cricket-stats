@@ -129,7 +129,6 @@ def leader_board():
         df2 = calculate_stats( params)
 
         st.write(df2)
-        print(df.columns)
         df=df2.head(30)
         df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
         df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
