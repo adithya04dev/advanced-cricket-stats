@@ -126,22 +126,23 @@ def leader_board():
     # Add a submit button
     if st.button('Submit',key='l'):
         # Calculate stats
-        df = calculate_stats( params)
+        df2 = calculate_stats( params)
 
-        st.write(df)
-
+        st.write(df2)
+        print(df.columns)
+        df=df2.head(30)
+        df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
         df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
-        df[df.columns[7]] = pd.to_numeric(df[df.columns[7]], errors='coerce')
         fig, ax = plt.subplots()
-        scatter = ax.scatter(df[df.columns[6]], df[df.columns[7]])
+        scatter = ax.scatter(df[df.columns[5]], df[df.columns[6]])
         
         # Annotate each point with the batsman name
         for i, row in df.iterrows():
-            ax.annotate(row[df.columns[0]], (row[df.columns[6]], row[df.columns[7]]), textcoords="offset points", xytext=(0,10), ha='center')
+            ax.annotate(row[df.columns[0]], (row[df.columns[5]], row[df.columns[6]]), textcoords="offset points", xytext=(0,10), ha='center')
         
-        ax.set_title(f'{df.columns[6]} vs {df.columns[7]}')
-        ax.set_xlabel(df.columns[6])
-        ax.set_ylabel(df.columns[7])
+        ax.set_title(f'{df.columns[5]} vs {df.columns[6]}')
+        ax.set_xlabel(df.columns[5])
+        ax.set_ylabel(df.columns[6])
         
         # Display plot in Streamlit
         st.pyplot(fig)
