@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from big_query_engine_code import dropdown_values
-
+import time
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import calculate_stats
 import seaborn as sns
@@ -126,9 +126,11 @@ def leader_board():
     # Add a submit button
     if st.button('Submit',key='l'):
         # Calculate stats
+        st=time.time()
         df2 = calculate_stats( params)
 
         st.write(df2)
+        st.write(f" time taken for query {time.time()-st}")
         df=df2.head(10)
         df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
         df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
@@ -143,6 +145,11 @@ def leader_board():
         ax.set_xlabel(df.columns[5])
         ax.set_ylabel(df.columns[6])
         
+
+            
+        
+        # Display plot in Streamlit
+        st.pyplot(fig)
 
             
         
