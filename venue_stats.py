@@ -74,11 +74,11 @@ def venue_search():
     if st.button('Submit',key='vs'):
         # Calculate stats
         # bt_stats, in_stats = calculate_venue_stats(params)
-        st=time.time()
+        sta=time.time()
         df2 = calculate_stats( params)
 
         st.write(df2)
-        st.write(f" time taken for query {time.time()-st}")
+        st.write(f" time taken for query {time.time()-sta}")
         df=df2.head(10)
         df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
         df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
