@@ -11,3 +11,5 @@ google-generativeai
 langgraph
 langchain-community
 langchain-openai
+seaborn
+matplotlib
