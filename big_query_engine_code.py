@@ -301,8 +301,8 @@ def convert_to_sql_query(params):
                 GROUP BY {group_by}
             ),
             calculations AS (
-                {group_by},
-                SELECT Innings, Runs, BallsFaced, Outs, Runs / NULLIF(Outs, 0) AS Average, 
+                
+                SELECT {group_by},Innings, Runs, BallsFaced, Outs, Runs / NULLIF(Outs, 0) AS Average, 
                 (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
                 (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
                 (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
@@ -332,7 +332,7 @@ def convert_to_sql_query(params):
                 (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
                 FROM stats
             )
-            SELECT {group_by},Bowler, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
+            SELECT {group_by}, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
             FROM calculations
             ORDER BY Wickets DESC;
             """
