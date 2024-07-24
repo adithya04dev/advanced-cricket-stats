@@ -4,6 +4,8 @@ from big_query_engine_code import dropdown_values
 
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import calculate_stats
+import seaborn as sns
+import matplotlib.pyplot as plt
 def leader_board():
     # Define a function to get user inputs
     def get_user_inputs():
@@ -127,3 +129,13 @@ def leader_board():
         stats = calculate_stats( params)
 
         st.write(stats)
+        fig, ax = plt.subplots()
+        sns.scatterplot(data=stats.head(40), x=stats.columns[6], y=stats.columns[7], hue=stats.columns[0],  ax=ax)
+        ax.set_title('Runs vs Balls Faced')
+        ax.set_xlabel('Balls Faced')
+        ax.set_ylabel('Runs')
+
+            
+        
+        # Display plot in Streamlit
+        st.pyplot(fig)
