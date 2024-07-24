@@ -293,7 +293,7 @@ def convert_to_sql_query(params):
         if stats_type == 'batting':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(batter_runs) as Runs, SUM(balls_faced) as BallsFaced, SUM(batter_out) as Outs,
+                SELECT  {group_by},COUNT(DISTINCT match_no) as Innings, SUM(batter_runs) as Runs, SUM(balls_faced) as BallsFaced, SUM(batter_out) as Outs,
                         SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
                     SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
@@ -301,20 +301,21 @@ def convert_to_sql_query(params):
                 GROUP BY {group_by}
             ),
             calculations AS (
+                {group_by},
                 SELECT Innings, Runs, BallsFaced, Outs, Runs / NULLIF(Outs, 0) AS Average, 
                 (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
                 (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
                 (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
                 FROM stats
             )
-            SELECT  Innings, Runs, BallsFaced, Outs, Average, StrikeRate, DotBallPercentage, BoundaryPercentage
+            SELECT  {group_by},Innings, Runs, BallsFaced, Outs, Average, StrikeRate, DotBallPercentage, BoundaryPercentage
             FROM calculations
             ORDER BY Runs DESC;
             """
         elif stats_type == 'bowling':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT match_no) as Innings, 
+                SELECT  {group_by},COUNT(DISTINCT match_no) as Innings, 
                  SUM(balls_faced) as BallsBowled,
                 SUM(out) as Wickets, 
                 SUM(bowler_runs) as RunsConceded, 
@@ -325,13 +326,13 @@ def convert_to_sql_query(params):
                 GROUP BY {group_by}
             ),
             calculations AS (
-                SELECT  Innings, Wickets, RunsConceded, BallsBowled, Wickets / NULLIF(Innings, 0) AS Average,
+                SELECT  {group_by},Innings, Wickets, RunsConceded, BallsBowled, Wickets / NULLIF(Innings, 0) AS Average,
                 (RunsConceded / NULLIF(BallsBowled, 0)) * 6 AS EconomyRate,
                 (DotBallsBowled / NULLIF(BallsBowled, 0)) * 100 AS DotBallPercentage,
                 (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
                 FROM stats
             )
-            SELECT Bowler, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
+            SELECT {group_by},Bowler, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
             FROM calculations
             ORDER BY Wickets DESC;
             """
