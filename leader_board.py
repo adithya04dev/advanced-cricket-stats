@@ -136,7 +136,7 @@ def leader_board():
         
         # Annotate each point with the batsman name
         for i, row in df.iterrows():
-            ax.annotate(df[stats.columns[0]], (df[stats.columns[6]], df[stats.columns[7]]), textcoords="offset points", xytext=(0,10), ha='center')
+            ax.annotate(df[df.columns[0]], (df[df.columns[6]], df[df.columns[7]]), textcoords="offset points", xytext=(0,10), ha='center')
         
         ax.set_title(f'{df.columns[6]} vs {df.columns[7]}')
         ax.set_xlabel(df.columns[6])
