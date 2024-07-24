@@ -129,7 +129,7 @@ def leader_board():
         df2 = calculate_stats( params)
 
         st.write(df2)
-        df=df2.head(30)
+        df=df2.head(10)
         df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
         df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
         fig, ax = plt.subplots()
@@ -143,8 +143,6 @@ def leader_board():
         ax.set_xlabel(df.columns[5])
         ax.set_ylabel(df.columns[6])
         
-        # Display plot in Streamlit
-        st.pyplot(fig)
 
             
         
