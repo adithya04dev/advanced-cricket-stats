@@ -126,14 +126,24 @@ def leader_board():
     # Add a submit button
     if st.button('Submit',key='l'):
         # Calculate stats
-        stats = calculate_stats( params)
+        df = calculate_stats( params)
 
-        st.write(stats)
+        st.write(df)
+
+
         fig, ax = plt.subplots()
-        sns.scatterplot(data=stats.head(40), x=stats.columns[6], y=stats.columns[7], hue=stats.columns[0],  ax=ax)
-        ax.set_title('Runs vs Balls Faced')
-        ax.set_xlabel('Balls Faced')
-        ax.set_ylabel('Runs')
+        scatter = ax.scatter(df[stats.columns[6]], df[stats.columns[7]])
+        
+        # Annotate each point with the batsman name
+        for i, row in df.iterrows():
+            ax.annotate(df[stats.columns[0]], (df[stats.columns[6]], df[stats.columns[7]), textcoords="offset points", xytext=(0,10), ha='center')
+        
+        ax.set_title(f'{df.columns[6]} vs {df.columns[7]}')
+        ax.set_xlabel(df.columns[6])
+        ax.set_ylabel(df.columns[7])
+        
+        # Display plot in Streamlit
+        st.pyplot(fig)
 
             
         
