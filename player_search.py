@@ -114,22 +114,4 @@ def player_search():
 
         st.write(df2)
         st.write(f" time taken for query {time.time()-sta}")
-        df=df2.head(10)
-        df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
-        df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
-        fig, ax = plt.subplots()
-        scatter = ax.scatter(df[df.columns[5]], df[df.columns[6]])
         
-        # Annotate each point with the batsman name
-        for i, row in df.iterrows():
-            ax.annotate(row[df.columns[0]], (row[df.columns[5]], row[df.columns[6]]), textcoords="offset points", xytext=(0,10), ha='center')
-        
-        ax.set_title(f'{df.columns[5]} vs {df.columns[6]}')
-        ax.set_xlabel(df.columns[5])
-        ax.set_ylabel(df.columns[6])
-        
-
-            
-        
-        # Display plot in Streamlit
-        st.pyplot(fig)
