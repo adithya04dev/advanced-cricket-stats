@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from big_query_engine_code import load_dropdown_values
 from big_query_engine_code import dropdown_values
-
+import time
 from big_query_engine_code import calculate_stats
 def venue_search():
     def get_user_inputs():
@@ -74,11 +74,28 @@ def venue_search():
     if st.button('Submit',key='vs'):
         # Calculate stats
         # bt_stats, in_stats = calculate_venue_stats(params)
-        stats = calculate_stats(params)
-        # fig = px.bar(in_stats, x=in_stats.index, y='Average_Score', title='Average Score')
-        # st.plotly_chart(fig)
-        # fig = px.scatter(bt_stats, x='EconomyRate', y='BowlingAverage', color=bt_stats.index, title='Economy Rate vs Bowling Average')
-        # st.plotly_chart(fig)
+        st=time.time()
+        df2 = calculate_stats( params)
 
-        # st.write(in_stats)
-        st.write(stats)
+        st.write(df2)
+        st.write(f" time taken for query {time.time()-st}")
+        df=df2.head(10)
+        df[df.columns[5]] = pd.to_numeric(df[df.columns[5]], errors='coerce')
+        df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
+        fig, ax = plt.subplots()
+        scatter = ax.scatter(df[df.columns[5]], df[df.columns[6]])
+        
+        # Annotate each point with the batsman name
+        for i, row in df.iterrows():
+            ax.annotate(row[df.columns[0]], (row[df.columns[5]], row[df.columns[6]]), textcoords="offset points", xytext=(0,10), ha='center')
+        
+        ax.set_title(f'{df.columns[5]} vs {df.columns[6]}')
+        ax.set_xlabel(df.columns[5])
+        ax.set_ylabel(df.columns[6])
+        
+
+            
+        
+        # Display plot in Streamlit
+        st.pyplot(fig)
+
