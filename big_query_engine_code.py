@@ -146,9 +146,9 @@ def convert_to_sql_query(params):
                     BallsFaced,
                     Outs,
                     Runs / NULLIF(Outs, 0) AS Average,
-                    (Runs / BallsFaced) * 100 AS StrikeRate,
-                    (DotBallsFaced / BallsFaced) * 100 AS DotBallPercentage,
-                    (BoundaryBalls / BallsFaced) * 100 AS BoundaryPercentage
+                    (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+                    (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+                    (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
                 FROM stats
                 )
                 SELECT
@@ -187,9 +187,9 @@ def convert_to_sql_query(params):
                     RunsConceded,
                     BallsBowled,
                     Wickets / NULLIF(Innings, 0) AS Average,
-                    (RunsConceded / BallsBowled) * 6 AS EconomyRate,
-                    (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage,
-                    (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
+                    (RunsConceded / NULLIF(BallsBowled, 0)) * 6 AS EconomyRate,
+                    (DotBallsBowled / NULLIF(BallsBowled, 0)) * 100 AS DotBallPercentage,
+                    (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
                 FROM stats
                 )
                 SELECT
@@ -229,9 +229,9 @@ def convert_to_sql_query(params):
                     BallsFaced,
                     Outs,
                     Runs / NULLIF(Outs, 0) AS Average,
-                    (Runs / BallsFaced) * 100 AS StrikeRate,
-                    (DotBallsFaced / BallsFaced) * 100 AS DotBallPercentage,
-                    (BoundaryBalls / BallsFaced) * 100 AS BoundaryPercentage
+                    (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+                    (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+                    (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
                 FROM stats
                 )
                 SELECT
@@ -270,9 +270,9 @@ def convert_to_sql_query(params):
                     RunsConceded,
                     BallsBowled,
                     Wickets / NULLIF(Innings, 0) AS Average,
-                    (RunsConceded / BallsBowled) * 6 AS EconomyRate,
-                    (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage,
-                    (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
+                    (RunsConceded / NULLIF(BallsBowled, 0)) * 6 AS EconomyRate,
+                    (DotBallsBowled / NULLIF(BallsBowled, 0)) * 100 AS DotBallPercentage,
+                    (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
                 FROM stats
                 )
                 SELECT
@@ -301,7 +301,10 @@ def convert_to_sql_query(params):
                 GROUP BY {group_by}
             ),
             calculations AS (
-                SELECT Innings, Runs, BallsFaced, Outs, Runs / NULLIF(Outs, 0) AS Average, (Runs / BallsFaced) * 100 AS StrikeRate, (DotBallsFaced / BallsFaced) * 100 AS DotBallPercentage, (BoundaryBalls / BallsFaced) * 100 AS BoundaryPercentage
+                SELECT Innings, Runs, BallsFaced, Outs, Runs / NULLIF(Outs, 0) AS Average, 
+                (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+                (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+                (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
                 FROM stats
             )
             SELECT  Innings, Runs, BallsFaced, Outs, Average, StrikeRate, DotBallPercentage, BoundaryPercentage
@@ -320,7 +323,9 @@ def convert_to_sql_query(params):
             ),
             calculations AS (
                 SELECT  Innings, Wickets, RunsConceded, BallsBowled, Wickets / NULLIF(Innings, 0) AS Average,
-                  (RunsConceded / BallsBowled) * 6 AS EconomyRate, (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage, (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
+                (RunsConceded / NULLIF(BallsBowled, 0)) * 6 AS EconomyRate,
+                (DotBallsBowled / NULLIF(BallsBowled, 0)) * 100 AS DotBallPercentage,
+                (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
                 FROM stats
             )
             SELECT Bowler, Innings, Wickets, RunsConceded, BallsBowled, Average, EconomyRate, DotBallPercentage, BoundaryPercentage
@@ -350,9 +355,9 @@ def convert_to_sql_query(params):
             BallsFaced,
             Outs,
             Runs / NULLIF(Outs, 0) AS Average,
-            (Runs / BallsFaced) * 100 AS StrikeRate,
-            (DotBallsFaced / BallsFaced) * 100 AS DotBallPercentage,
-            (BoundaryBalls / BallsFaced) * 100 AS BoundaryPercentage
+            (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+            (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+            (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
         FROM stats
         )
         SELECT  {group_by},
@@ -389,9 +394,9 @@ def convert_to_sql_query(params):
             Balls,
             Outs,
             Runs / NULLIF(Outs, 0) AS Average,
-            (Runs / Balls) * 100 AS StrikeRate,
-            (DotBalls / Balls) * 100 AS DotBallPercentage,
-            (BoundaryBalls / Balls) * 100 AS BoundaryPercentage
+            (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+            (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+            (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
           FROM stats
         )
         SELECT
@@ -431,9 +436,9 @@ def convert_to_sql_query(params):
                 BallsFaced,
                 Outs,
                 Runs / NULLIF(Outs, 0) AS Average,
-                (Runs / BallsFaced) * 100 AS StrikeRate,
-                (DotBallsFaced / BallsFaced) * 100 AS DotBallPercentage,
-                (BoundaryBalls / BallsFaced) * 100 AS BoundaryPercentage
+                (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
+                (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
+                (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
               FROM stats
             )
             SELECT
@@ -471,9 +476,9 @@ def convert_to_sql_query(params):
                 RunsConceded,
                 BallsBowled,
                 Wickets / NULLIF(Innings, 0) AS Average,
-                (RunsConceded / BallsBowled) * 6 AS EconomyRate,
-                (DotBallsBowled / BallsBowled) * 100 AS DotBallPercentage,
-                (BoundaryBalls / BallsBowled) * 100 AS BoundaryPercentage
+                (RunsConceded / NULLIF(BallsBowled, 0)) * 6 AS EconomyRate,
+                (DotBallsBowled / NULLIF(BallsBowled, 0)) * 100 AS DotBallPercentage,
+                (BoundaryBalls / NULLIF(BallsBowled, 0)) * 100 AS BoundaryPercentage
               FROM stats
             )
             SELECT
