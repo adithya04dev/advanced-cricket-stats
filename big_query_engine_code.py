@@ -293,7 +293,7 @@ def convert_to_sql_query(params):
         if stats_type == 'batting':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(Batsman_Run) as Runs, SUM(balls_faced) as BallsFaced, SUM(batter_out) as Outs,
+                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(batter_runs) as Runs, SUM(balls_faced) as BallsFaced, SUM(batter_out) as Outs,
                         SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsFaced,
                     SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
@@ -314,7 +314,10 @@ def convert_to_sql_query(params):
         elif stats_type == 'bowling':
             sql_query = f"""
             WITH stats AS (
-                SELECT  COUNT(DISTINCT match_no) as Innings, SUM(out) as Wickets, SUM(bowler_runs) as RunsConceded, 
+                SELECT  COUNT(DISTINCT match_no) as Innings, 
+                 SUM(balls_faced) as BallsBowled,
+                SUM(out) as Wickets, 
+                SUM(bowler_runs) as RunsConceded, 
                     SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
                     SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
                 FROM {database}.{table}
@@ -394,9 +397,9 @@ def convert_to_sql_query(params):
             Balls,
             Outs,
             Runs / NULLIF(Outs, 0) AS Average,
-            (Runs / NULLIF(BallsFaced, 0)) * 100 AS StrikeRate,
-            (DotBallsFaced / NULLIF(BallsFaced, 0)) * 100 AS DotBallPercentage,
-            (BoundaryBalls / NULLIF(BallsFaced, 0)) * 100 AS BoundaryPercentage
+            (Runs / NULLIF(Balls, 0)) * 100 AS StrikeRate,
+            (DotBalls / NULLIF(Balls, 0)) * 100 AS DotBallPercentage,
+            (BoundaryBalls / NULLIF(Balls, 0)) * 100 AS BoundaryPercentage
           FROM stats
         )
         SELECT
@@ -465,6 +468,8 @@ def convert_to_sql_query(params):
                 SUM(balls_faced) as BallsBowled,
                     SUM(CASE WHEN score=0 THEN 1 ELSE 0 END)  AS DotBallsBowled,
                     SUM(CASE WHEN batter_runs IN (4, 6) THEN 1 ELSE 0 END) AS BoundaryBalls,
+                    FROM {database}.{table}
+
               WHERE {condition}
               GROUP BY bowler
             ),
