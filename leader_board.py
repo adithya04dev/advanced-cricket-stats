@@ -130,7 +130,8 @@ def leader_board():
 
         st.write(df)
 
-
+        df[df.columns[6]] = pd.to_numeric(df[df.columns[6]], errors='coerce')
+        df[df.columns[7]] = pd.to_numeric(df[df.columns[7]], errors='coerce')
         fig, ax = plt.subplots()
         scatter = ax.scatter(df[df.columns[6]], df[df.columns[7]])
         
