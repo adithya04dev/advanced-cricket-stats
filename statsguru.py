@@ -83,29 +83,40 @@ history =None
 chat =None 
 n=0
 
+
 def create_vector_stores():
-    #iterate over all files in C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\github_repo2\dropdown_files
-    
-    for column in os.listdir(r'.\vector_store_files'):
+    # Get the absolute path to the vector_store_files directory
+    vector_store_path = os.path.join(os.getcwd(), 'vector_store_files')
+    vector_db_path = os.path.join(os.getcwd(), 'vector_databases')
+
+    # Create directories if they don't exist
+    os.makedirs(vector_store_path, exist_ok=True)
+    os.makedirs(vector_db_path, exist_ok=True)
+
+    for column in os.listdir(vector_store_path):
         values = []
         # Load the list values from a .txt file
-        with open(fr'.\vector_store_files\{column}', "r") as f:
+        with open(os.path.join(vector_store_path, column), "r") as f:
             for line in f:
                 values.append(line.strip())
 
         text_splitter = CharacterTextSplitter(
             separator="\n",
-            chunk_size=500,   chunk_overlap=40
-
+            chunk_size=500,
+            chunk_overlap=40
         )
         texts = text_splitter.create_documents(values)
-        print(len(texts))
+        print(f"Processing {column}: {len(texts)} chunks created")
+
         embeddings = OpenAIEmbeddings(
             model='text-embedding-ada-002'
         )
-        db = FAISS.from_documents(texts,embeddings)
-        col=column.replace('.txt','')
-        db.save_local(fr".\vector_databases\{col}")
+        db = FAISS.from_documents(texts, embeddings)
+        col = column.replace('.txt', '')
+        db.save_local(os.path.join(vector_db_path, col))
+        print(f"Vector store for {col} saved successfully")
+
+    print("All vector stores created and saved")
 create_vector_stores()
 def find_references(user_query,model='gpt-4o-mini',stream=True):
     global history,chat
