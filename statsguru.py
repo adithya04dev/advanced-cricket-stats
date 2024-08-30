@@ -83,7 +83,7 @@ history =None
 chat =None 
 n=0
 
-def create_vectores_stores():
+def create_vector_stores():
     #iterate over all files in C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\github_repo2\dropdown_files
     
     for column in os.listdir(r'\vector_store_files'):
