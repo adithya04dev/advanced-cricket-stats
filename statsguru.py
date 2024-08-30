@@ -360,7 +360,7 @@ Thought: {agent_scratchpad}
 
         result=agent_executor.invoke({"input": user_query})
     except Exception as e:
-        # print(e)
+        print(e)
         n=404
         return {"response":str(e),"query":user_query,"f":None}
     res_gem+=result['output']
@@ -410,7 +410,6 @@ def coding(json_data):
     global n,critique
     llm2 = ChatOpenAI(model='gpt-4o-mini')
     ti=time.time()
-    n+=1
     if n>4:
         remarks="Cannot be processed further. Simplify the Quey and try again."
     if n==404:
@@ -434,6 +433,7 @@ def coding(json_data):
 
     print(f"sql query generated for {n}th iteration :",sql_query)
 
+    n+=1
 
 
     return [sql_query,f]
