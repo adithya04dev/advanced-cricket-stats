@@ -32,7 +32,7 @@ from langchain.tools import tool
 #import propmt template,agent executor,react agent
 from langchain.prompts import PromptTemplate
 from langchain.agents import AgentExecutor, create_react_agent
-
+from langchain_text_splitters import CharacterTextSplitter
 from langchain_anthropic import ChatAnthropic
 from langchain_groq import ChatGroq
 import requests 
@@ -83,7 +83,30 @@ history =None
 chat =None 
 n=0
 
+def create_vectores_stores():
+    #iterate over all files in C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\github_repo2\dropdown_files
+    
+    for column in os.listdir(r'\vector_store_files'):
+        values = []
+        # Load the list values from a .txt file
+        with open(fr'.\vector_store_files\{column}', "r") as f:
+            for line in f:
+                values.append(line.strip())
 
+        text_splitter = CharacterTextSplitter(
+            separator="\n",
+            chunk_size=500,   chunk_overlap=40
+
+        )
+        texts = text_splitter.create_documents(values)
+        print(len(texts))
+        embeddings = OpenAIEmbeddings(
+            model='text-embedding-ada-002'
+        )
+        db = FAISS.from_documents(texts,embeddings)
+        col=column.replace('.txt','')
+        db.save_local(fr".\vector_databases\{col}")
+create_vector_stores()
 def find_references(user_query,model='gpt-4o-mini',stream=True):
     global history,chat
     global n
