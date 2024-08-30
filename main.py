@@ -26,6 +26,13 @@ elif option == 'Player Search':
     player_search()
 elif option == 'Venue Search':
     venue_search()
-question=st.text_input("Enter Your Query")
-if question:
+col1, col2 = st.columns([3, 1])  # Adjust the ratio as needed
+
+with col1:
+    question = st.text_input("Enter Your Query")
+
+with col2:
+    submit = st.button("Submit")
+
+if submit and question:
     ask(question)
