@@ -199,7 +199,7 @@ def find_references(user_query,model='gpt-4o-mini',stream=True):
                 embeddings = OpenAIEmbeddings(
                     model='text-embedding-ada-002'
                 )
-                db = FAISS.load_local(os.path.join(os.getcwd(), 'vector_databases'), embeddings, allow_dangerous_deserialization=True)
+                db = FAISS.load_local(os.path.join(os.getcwd(), 'vector_databases',column_name), embeddings, allow_dangerous_deserialization=True)
 
                 # Create document retriever and find most relevant document to player name
                 retriever = db.as_retriever(search_type='mmr', search_kwargs={'k': 5, 'lambda_mult': 1})
