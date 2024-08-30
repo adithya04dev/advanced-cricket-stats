@@ -7,9 +7,11 @@ db_dtypes
 langchain
 langchain-core
 langchain-together
+langchain-groq
+langchain-anthropic
+langchain-openai
 google-generativeai
 langgraph
 langchain-community
-langchain-openai
 seaborn
 matplotlib
