@@ -244,49 +244,7 @@ def find_references(user_query,model='gpt-4o-mini',stream=True):
         
 
     tools = [get_value_from_column,add_2_numbers]
-    system_prompt=""" 
-   You are an helpful assistant.
-
-    """
-    user_prompt=f"""   
-    User Query: "{user_query}"
-    -
-    Finally you need to return the final answer with correct column names and values that are present in the database.
-    Thats why,you need  to preprocess these user queries by seraching in the database using the tool get_value_from_column
-    and then return the final answer.
-
     
-
-
-    Some of the important columns,and its values in the database are:
-    - venue : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - series_name : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - tournament_name : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - team_bat : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - team_bowl : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - batter : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - bowler : many values are present in this column, so you may need to search in database using a function that is mentioned below.
-    - bowler_kind: ['pace bowler','spin bowler'] (you may need not search in database for this columns,values as they are only few)
-    - batter_hand :['Right Hand Batter','Left Hand Batter'] (you may need not search in database for this columns,values as they are only few)
-    - match_type : ['ODI','MDM','Test','IT20','T20','ODM'] (you may need not search in database for this columns,values as they are only few)
-
-    - bowler_type : ['RAP'(abbreviated for right arm pace),'OB'(abbreviated for off break),'LWS'(abbreviated for left wrist spin),
-    'LAP'(abbreviated for left arm pace),'LB'(abbreviated for left arm break),'SLA'(abbreviated for slow left arm)
-    ] (you may need not search in database for this columns,values as they are only few)
-
-    -another point is that tournament_name consists of  name of series,event..
-    but the seriesname consists of tournamanet_name+Season  of the series/event..
-      for example:tournament_namecan be :IPL ,series_name:IPL 2024 season: 2024
-    thus for query involving just the name of event you can use directly the tournament_name,if specifically
-    mentioned the event/tournament with a season/year you can use series_name.
-
-
-
-
-
-
-
-    """
     MEMORY_KEY = "chat_history"
     # prompt for tool calling agent
     # prompt = ChatPromptTemplate.from_messages([
@@ -337,8 +295,9 @@ Important  info about databse
     -another point is that tournament_name consists of  name of series,event..
     but the seriesname consists of tournamanet_name+Season  of the series/event..
       for example:tournament_namecan be :IPL ,series_name:IPL 2024 season: 2024
-    thus for query involving just the name of event you can use directly the tournament_name,if specifically
-    mentioned the event/tournament with a season/year you can use series_name.
+    thus for query involving just the name of event you can use directly the tournament_name, or else if specifically
+    mentioned the event/tournament with a season/year then use series_name. (make sure you use only one of them).
+
 
 
 ---------------------
