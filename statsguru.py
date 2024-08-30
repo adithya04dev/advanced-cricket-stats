@@ -325,7 +325,7 @@ Consider which columns are relevant and what search terms to use.
 
 Action: get_value_from_column
 
-Action Input: [['column_name1', 'search_value1'],['column_name2', 'search_value2'], ...].
+Action Input: [['column_name1', 'search_value1'],['column_name2', 'search_value2'], ...]
 
 Observation: Review the results returned by the action. 
 These are the most similar values found in the database for the given search terms.
