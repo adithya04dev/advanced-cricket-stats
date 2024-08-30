@@ -165,7 +165,7 @@ def find_references(user_query,model='gpt-4o-mini',stream=True):
                 embeddings = OpenAIEmbeddings(
                     model='text-embedding-ada-002'
                 )
-                db = FAISS.load_local(fr"C:\Users\adith\Documents\Projects\python-projects\cric_metric_clone\vector_databases\{column_name}", embeddings, allow_dangerous_deserialization=True)
+                db = FAISS.load_local(fr".\vector_databases\{column_name}", embeddings, allow_dangerous_deserialization=True)
 
                 # Create document retriever and find most relevant document to player name
                 retriever = db.as_retriever(search_type='mmr', search_kwargs={'k': 5, 'lambda_mult': 1})
