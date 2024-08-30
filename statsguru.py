@@ -47,6 +47,10 @@ credentials_bytes = base64.b64decode(credentials_b64)
 credentials_dict = json.loads(credentials_bytes)
 credentials = service_account.Credentials.from_service_account_info(credentials_dict)
 
+API_KEY = os.environ['edge_api_key']
+URL = "https://api.bing.microsoft.com/v7.0/search"
+HEADERS = {"Ocp-Apim-Subscription-Key": API_KEY}
+
 llm=ChatOpenAI(model='gpt-4o-mini')
 prompt = ChatPromptTemplate.from_messages(
     [
