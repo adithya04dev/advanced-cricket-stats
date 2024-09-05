@@ -22,22 +22,4 @@ Google Cloud BigQuery: Efficient execution of SQL queries over large datasets, e
 
 
 
-Setup and Installation
 
-Clone the repository:
-
-git clone https://github.com/your-repo/statsviz.git
-cd statsviz
-
-Install required dependencies:
-pip install -r requirements.txt
-
-Set up Google Cloud BigQuery:
-Ensure you have a Google Cloud project with BigQuery enabled.
-Create a service account and download the credentials file.
-Set the GOOGLE_APPLICATION_CREDENTIALS environment variable to point to your credentials file:
-export GOOGLE_APPLICATION_CREDENTIALS="path_to_your_credentials_file.json"
-
-Run the Streamlit App:
-
-streamlit run main.py
