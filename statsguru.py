@@ -118,7 +118,7 @@ def create_vector_stores():
 
     print("All vector stores created and saved")
 # create_vector_stores()
-def find_references(user_query,model='gpt-4o-mini',stream=True):
+def find_references(user_query,model='gpt-4o-min',stream=True):
     global history,chat
     global n
     n=0
