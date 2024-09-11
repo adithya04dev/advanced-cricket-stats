@@ -1,6 +1,7 @@
-# StatsViz: Interactive Cricket Analytics Dashboard
+# StatsViz: Interactive Cricket Analytics Dashboard and an AI tool.
 
-**StatsViz** is an interactive dashboard designed to provide in-depth cricket analytics. It allows users to explore a wide range of statistics related to players, teams, venues, and matches. With StatsViz, you can gain insights into leaderboards for batters and bowlers, track performance by series, venue, and date, and filter data by player types (batter/bowler).
+**StatsViz** is an interactive dashboard designed to provide in-depth cricket analytics. It allows users to explore a wide range of statistics related to players, teams, venues, and matches. With StatsViz, you can gain insights into leaderboards for batters and bowlers, track performance by series, venue, and date, and filter data by player types (batter/bowler).   
+It also includes an AI based tool that can calculate stats directly based on user text prompt by iteratively generating query and executing it in bigquery.
 
 ## Features
 
