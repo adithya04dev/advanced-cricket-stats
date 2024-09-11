@@ -11,7 +11,8 @@
 - **Real-time Data**: Utilize real-time querying to calculate and display the latest stats.
 
 ## Tech Stack
-
+- **Langgraph**: For making the the system  follow certain steps/stages iteratively.
+- **Langchain**: Used to create tool calling agent(specifically ReAct) to search for correct names/events/venues that are actually present in database.
 - **Streamlit**: Simple yet powerful framework for building the interactive web UI.
 - **SQL**: Backend logic for calculating and retrieving cricket statistics.
 - **Google Cloud BigQuery**: Efficient execution of SQL queries over large datasets, enabling scalable and fast analytics.
