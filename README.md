@@ -20,3 +20,10 @@ It also includes an AI based tool that can calculate stats directly based on use
 
 ---
 
+## Architecture
+
+![Architecture](./vector_databases/Screenshot%202024-09-20%20085938.png)
+![Architecture](./vector_databases/Screenshot%202024-09-20%20085948.png)
+
+
+
