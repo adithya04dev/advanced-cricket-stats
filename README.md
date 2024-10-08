@@ -19,9 +19,9 @@ It also includes an AI based tool that can calculate stats directly based on use
 - **Google Cloud BigQuery**: Efficient execution of SQL queries over large datasets, enabling scalable and fast analytics.
 
 ---
-ScreenShots:  
-![Alt text](./vector_databases/Screenshot%2024-10-08%203637.png)       
-![Alt text](./vector_databases/Screenshot%2024-10-08%203648.png)      
+### Screenshots:  
+![Player Type Selection](./vector_databases/Screenshot%202024-10-08%20203648.png)   
+![Architecture Diagram](./vector_databases/Screenshot%202024-09-20%20200859.png)   
 
 ## Text-Stats Architecture  
 
