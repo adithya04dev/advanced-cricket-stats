@@ -28,6 +28,12 @@ elif option == 'Venue Search':
     venue_search()
 col1, col2 = st.columns([3, 1])  # Adjust the ratio as needed
 
+
+
+st.write("Natural Language Querying ")
+st.write("Approach 1: For text-sql visit below link ")
+st.write("https://cricsql-f233a552789f.herokuapp.com/")
+st.write("Approach 2: For text-stats")
 with col1:
     question = st.text_input("Enter Your Query")
 
