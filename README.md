@@ -20,8 +20,8 @@ It also includes an AI based tool that can calculate stats directly based on use
 
 ---
 ScreenShots:  
-![Alt text](Screenshot 2024-10-08 203637.png)     
-![Alt text](Screenshot 2024-10-08 203637.png)    
+![Alt text](Screenshot%2024-10-08%203637.png)     
+![Alt text](Screenshot%2024-10-08%203637.png)    
 
 ## Text-Stats Architecture  
 
