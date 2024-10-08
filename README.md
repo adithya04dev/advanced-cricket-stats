@@ -20,7 +20,7 @@ It also includes an AI based tool that can calculate stats directly based on use
 
 ---
 ### Screenshots:  
-![Architecture Diagram](./vector_databases/Screenshot%202024-09-20%20203637.png)     
+![Architecture Diagram](./vector_databases/Screenshot%202024-10-08%20203637.png)     
  
 ![Player Type Selection](./vector_databases/Screenshot%202024-10-08%20203648.png)   
 
