@@ -23,9 +23,20 @@ It also includes an AI based tool that can calculate stats directly based on use
 ![Architecture Diagram](./vector_databases/Screenshot%202024-10-08%20203637.png)     
  
 ![Player Type Selection](./vector_databases/Screenshot%202024-10-08%20203648.png)   
+## Extension of this Project
+-A conversational chatbot that can generate and execute sql query based on given natural language query on the cricket database.It can be built using two approaches.
+First  
+-A chatbot that can generate sql query ,improve its response and execute. All of these intermediate functions controlled by user.  
+-Thus giving more control to analyst, thus can handle complex workflow.  
+Link : https://github.com/adithya04dev/CrickAI-SQL.    
 
-## Text-Stats Architecture  
+Second (End to End)
+-A langraph agent that generates stats directly from natural language query.  
+-Sometimes intermediate steps may not be accurate,but are faster to respond.  
+-Implemented in statsguru.py file.   
 
+## Text-> Stats Architecture   
+Common part in both of the approaches.   
 ![Architecture](./vector_databases/Screenshot%202024-09-20%20085938.png)
 ![Architecture](./vector_databases/Screenshot%202024-09-20%20085949.png)
 
