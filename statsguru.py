@@ -51,7 +51,8 @@ API_KEY = os.environ['edge_api_key']
 URL = "https://api.bing.microsoft.com/v7.0/search"
 HEADERS = {"Ocp-Apim-Subscription-Key": API_KEY}
 
-llm=ChatOpenAI(model='gpt-4o-mini')
+# llm=ChatOpenAI(model='gpt-4o-mini')
+llm=ChatTogether(model='Qwen/Qwen2.5-72B-Instruct-Turbo')
 prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -142,7 +143,8 @@ def find_references(user_query,model='gpt-4o-min',stream=True):
     # elif model=='gemini':
     #     llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
     else:
-        llm = ChatGroq(model='llama-3.1-70b-versatile')  
+        # llm = ChatGroq(model='llama-3.1-70b-versatile')  
+        llm=ChatTogether(model='Qwen/Qwen2.5-72B-Instruct-Turbo')
   
     @tool
     def get_value_from_column(list1:str) -> str:
