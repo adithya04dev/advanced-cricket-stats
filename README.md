@@ -44,4 +44,42 @@ Common part in both of the approaches.
 ![Architecture](./vector_databases/Screenshot%202024-09-20%20085949.png)
 
 
+## Setup
+
+1.  **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/adithya04dev/advanced-cricket-stats.git
+    cd advanced-cricket-stats
+    ```
+2.  **Set up a Virtual Environment (Recommended):**
+
+    It's recommended to create a virtual environment to manage project dependencies separately. 
+
+    ```bash
+    python3 -m venv .venv
+    .venv\Scripts\activate 
+    ```
+
+3.  **Install Dependencies:**
+
+    Install the required Python packages using `pip`:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Database Setup:**
+
+    *   Ensure your BigQuery dataset and tables are created according to the schema used in your SQL queries. You'll need to load your cricket data into BigQuery. The specific table names and schema will depend on your project.
+    *   Make sure that the service account key has appropriate permissions (read access) to the BigQuery dataset.
+5.  **Run the Application:**
+
+    ```bash
+    streamlit run app.py  # Or the name of your main Streamlit file
+    ```
+
+    This command starts the Streamlit server, and you should be able to access the dashboard in your web browser (usually at `http://localhost:8501`).
+
+
+
 
