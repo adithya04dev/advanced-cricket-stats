@@ -19,6 +19,59 @@ credentials = service_account.Credentials.from_service_account_info(credentials_
 import pandas as pd
 from google.cloud import bigquery
 
+import mysql.connector
+from mysql.connector import errorcode
+import json
+
+# Database connection details (replace with your actual credentials)
+db_config = {
+    'host': 'your_mysql_host',
+    'user': 'your_mysql_user',
+    'password': 'your_mysql_password',
+    'database': 'your_mysql_database'
+}
+#if credentials not in env variables, then use the db_config dictionary
+try:
+    db_config['host'] = os.environ.get("MYSQL_HOST")
+    db_config['user'] = os.environ.get("MYSQL_USER")
+    db_config['password'] = os.environ.get("MYSQL_PASSWORD")
+    db_config['database'] = os.environ.get("MYSQL_DATABASE")
+
+except Exception as e:
+    print("Error while loading credentials from environment variables")
+    print(e)
+    print("Using default credentials")
+
+
+
+def query_to_dataframe_mysql(query):
+    """Executes a MySQL query and returns the result as a Pandas DataFrame."""
+    try:
+        cnx = mysql.connector.connect(**db_config)
+        cursor = cnx.cursor()
+        cursor.execute(query)
+        # Fetch all rows from the result set
+        rows = cursor.fetchall()
+
+        # Get column names from the cursor description
+        columns = [col[0] for col in cursor.description]
+
+        df = pd.DataFrame(rows, columns=columns)
+        return df
+
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+        else:
+            print(err)
+        return pd.DataFrame() # Return an empty DataFrame on error
+    finally:
+        if 'cnx' in locals() and cnx.is_connected():
+            cursor.close()
+            cnx.close()
+
 def query_to_dataframe( query):
     project_id = 'adept-cosine-420005'
 
@@ -498,6 +551,8 @@ def convert_to_sql_query(params):
             FROM calculations
             ORDER BY Wickets DESC;
             """
+
+
     return sql_query
 
 # query=convert_to_sql_query(params)
@@ -543,5 +598,6 @@ def load_dropdown_values(column):
 
 def calculate_stats(params):
     query = convert_to_sql_query(params)
-    df = query_to_dataframe(query)
+    # df = query_to_dataframe(query)
+    df=query_to_dataframe_mysql(query)
     return df
